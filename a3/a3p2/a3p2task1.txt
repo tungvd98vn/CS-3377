@@ -1,0 +1,472 @@
+Object 1
+user: root
+uid: 0
+gid: 0
+gecos: root
+home: /root
+shell: /bin/bash
+
+Object 2
+user: bin
+uid: 1
+gid: 1
+gecos: bin
+home: /bin
+shell: /sbin/nologin
+
+Object 3
+user: daemon
+uid: 2
+gid: 2
+gecos: daemon
+home: /sbin
+shell: /sbin/nologin
+
+Object 4
+user: adm
+uid: 3
+gid: 4
+gecos: adm
+home: /var/adm
+shell: /sbin/nologin
+
+Object 5
+user: lp
+uid: 4
+gid: 7
+gecos: lp
+home: /var/spool/lpd
+shell: /sbin/nologin
+
+Object 6
+user: sync
+uid: 5
+gid: 0
+gecos: sync
+home: /sbin
+shell: /bin/sync
+
+Object 7
+user: shutdown
+uid: 6
+gid: 0
+gecos: shutdown
+home: /sbin
+shell: /sbin/shutdown
+
+Object 8
+user: halt
+uid: 7
+gid: 0
+gecos: halt
+home: /sbin
+shell: /sbin/halt
+
+Object 9
+user: mail
+uid: 8
+gid: 12
+gecos: mail
+home: /var/spool/mail
+shell: /sbin/nologin
+
+Object 10
+user: operator
+uid: 11
+gid: 0
+gecos: operator
+home: /root
+shell: /sbin/nologin
+
+Object 11
+user: games
+uid: 12
+gid: 100
+gecos: games
+home: /usr/games
+shell: /sbin/nologin
+
+Object 12
+user: ftp
+uid: 14
+gid: 50
+gecos: FTP User
+home: /var/ftp
+shell: /sbin/nologin
+
+Object 13
+user: nobody
+uid: 99
+gid: 99
+gecos: Nobody
+home: /
+shell: /sbin/nologin
+
+Object 14
+user: pegasus
+uid: 66
+gid: 65
+gecos: tog-pegasus OpenPegasus WBEM/CIM services
+home: /var/lib/Pegasus
+shell: /sbin/nologin
+
+Object 15
+user: avahi-autoipd
+uid: 170
+gid: 170
+gecos: Avahi IPv4LL Stack
+home: /var/lib/avahi-autoipd
+shell: /sbin/nologin
+
+Object 16
+user: systemd-bus-proxy
+uid: 999
+gid: 997
+gecos: systemd Bus Proxy
+home: /
+shell: /sbin/nologin
+
+Object 17
+user: systemd-network
+uid: 998
+gid: 996
+gecos: systemd Network Management
+home: /
+shell: /sbin/nologin
+
+Object 18
+user: dbus
+uid: 81
+gid: 81
+gecos: System message bus
+home: /
+shell: /sbin/nologin
+
+Object 19
+user: polkitd
+uid: 997
+gid: 995
+gecos: User for polkitd
+home: /
+shell: /sbin/nologin
+
+Object 20
+user: sssd
+uid: 996
+gid: 994
+gecos: User for sssd
+home: /
+shell: /sbin/nologin
+
+Object 21
+user: apache
+uid: 48
+gid: 48
+gecos: Apache
+home: /usr/share/httpd
+shell: /sbin/nologin
+
+Object 22
+user: tss
+uid: 59
+gid: 59
+gecos: Account used by the trousers package to sandbox the tcsd daemon
+home: /dev/null
+shell: /sbin/nologin
+
+Object 23
+user: colord
+uid: 995
+gid: 992
+gecos: User for colord
+home: /var/lib/colord
+shell: /sbin/nologin
+
+Object 24
+user: abrt
+uid: 173
+gid: 173
+gecos: /etc/abrt
+home: /sbin/nologin
+shell: 
+
+Object 25
+user: unbound
+uid: 994
+gid: 991
+gecos: Unbound DNS resolver
+home: /etc/unbound
+shell: /sbin/nologin
+
+Object 26
+user: usbmuxd
+uid: 113
+gid: 113
+gecos: usbmuxd user
+home: /
+shell: /sbin/nologin
+
+Object 27
+user: saslauth
+uid: 993
+gid: 76
+gecos: Saslauthd user
+home: /run/saslauthd
+shell: /sbin/nologin
+
+Object 28
+user: postfix
+uid: 89
+gid: 89
+gecos: /var/spool/postfix
+home: /sbin/nologin
+shell: 
+
+Object 29
+user: libstoragemgmt
+uid: 992
+gid: 989
+gecos: daemon account for libstoragemgmt
+home: /var/run/lsm
+shell: /sbin/nologin
+
+Object 30
+user: geoclue
+uid: 991
+gid: 988
+gecos: User for geoclue
+home: /var/lib/geoclue
+shell: /sbin/nologin
+
+Object 31
+user: rpc
+uid: 32
+gid: 32
+gecos: Rpcbind Daemon
+home: /var/lib/rpcbind
+shell: /sbin/nologin
+
+Object 32
+user: setroubleshoot
+uid: 990
+gid: 987
+gecos: /var/lib/setroubleshoot
+home: /sbin/nologin
+shell: 
+
+Object 33
+user: rtkit
+uid: 172
+gid: 172
+gecos: RealtimeKit
+home: /proc
+shell: /sbin/nologin
+
+Object 34
+user: ntp
+uid: 38
+gid: 38
+gecos: /etc/ntp
+home: /sbin/nologin
+shell: 
+
+Object 35
+user: qemu
+uid: 107
+gid: 107
+gecos: qemu user
+home: /
+shell: /sbin/nologin
+
+Object 36
+user: rpcuser
+uid: 29
+gid: 29
+gecos: RPC Service User
+home: /var/lib/nfs
+shell: /sbin/nologin
+
+Object 37
+user: nfsnobody
+uid: 65534
+gid: 65534
+gecos: Anonymous NFS User
+home: /var/lib/nfs
+shell: /sbin/nologin
+
+Object 38
+user: radvd
+uid: 75
+gid: 75
+gecos: radvd user
+home: /
+shell: /sbin/nologin
+
+Object 39
+user: chrony
+uid: 989
+gid: 986
+gecos: /var/lib/chrony
+home: /sbin/nologin
+shell: 
+
+Object 40
+user: mysql
+uid: 27
+gid: 27
+gecos: MariaDB Server
+home: /var/lib/mysql
+shell: /sbin/nologin
+
+Object 41
+user: pcp
+uid: 988
+gid: 985
+gecos: Performance Co-Pilot
+home: /var/lib/pcp
+shell: /sbin/nologin
+
+Object 42
+user: pulse
+uid: 171
+gid: 171
+gecos: PulseAudio System Daemon
+home: /var/run/pulse
+shell: /sbin/nologin
+
+Object 43
+user: tomcat
+uid: 91
+gid: 91
+gecos: Apache Tomcat
+home: /usr/share/tomcat
+shell: /bin/nologin
+
+Object 44
+user: gdm
+uid: 42
+gid: 42
+gecos: /var/lib/gdm
+home: /sbin/nologin
+shell: 
+
+Object 45
+user: gnome-initial-setup
+uid: 987
+gid: 982
+gecos: /run/gnome-initial-setup/
+home: /sbin/nologin
+shell: 
+
+Object 46
+user: avahi
+uid: 70
+gid: 70
+gecos: Avahi mDNS/DNS-SD Stack
+home: /var/run/avahi-daemon
+shell: /sbin/nologin
+
+Object 47
+user: postgres
+uid: 26
+gid: 26
+gecos: PostgreSQL Server
+home: /var/lib/pgsql
+shell: /bin/nologin
+
+Object 48
+user: sshd
+uid: 74
+gid: 74
+gecos: Privilege-separated SSH
+home: /var/empty/sshd
+shell: /sbin/nologin
+
+Object 49
+user: oprofile
+uid: 16
+gid: 16
+gecos: Special user account to be used by OProfile
+home: /var/lib/oprofile
+shell: /sbin/nologin
+
+Object 50
+user: tcpdump
+uid: 72
+gid: 72
+gecos: /
+home: /sbin/nologin
+shell: 
+
+Object 51
+user: cslinuxtech
+uid: 1000
+gid: 1000
+gecos: Computer Science Department
+home: /cslinuxtech
+shell: /bin/bash
+
+Object 52
+user: nscd
+uid: 28
+gid: 28
+gecos: NSCD Daemon
+home: /
+shell: /sbin/nologin
+
+Object 53
+user: nslcd
+uid: 65
+gid: 55
+gecos: LDAP Client User
+home: /
+shell: /sbin/nologin
+
+Object 54
+user: dovenull
+uid: 237
+gid: 1376
+gecos: Dovecot's unauthorized user
+home: /usr/libexec/dovecot
+shell: /sbin/nologin
+
+Object 55
+user: lightdm
+uid: 236
+gid: 1379
+gecos: /var/lib/lightdm
+home: /sbin/nologin
+shell: 
+
+Object 56
+user: openvpn
+uid: 235
+gid: 1227
+gecos: OpenVPN
+home: /etc/openvpn
+shell: /sbin/nologin
+
+Object 57
+user: nm-openconnect
+uid: 234
+gid: 1236
+gecos: NetworkManager user for OpenConnect
+home: /
+shell: /sbin/nologin
+
+Object 58
+user: nm-openvpn
+uid: 233
+gid: 980
+gecos: Default user for running openvpn spawned by NetworkManager
+home: /
+shell: /sbin/nologin
+
+Object 59
+user: 
+uid: 
+gid: 
+gecos: 
+home: 
+shell: 
+

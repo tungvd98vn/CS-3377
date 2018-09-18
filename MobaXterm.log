@@ -1,0 +1,783 @@
+[8:24:24 PM]  BEGIN AddMobaConsoleFont
+[8:24:24 PM]  END AddMobaConsoleFont
+[20:24.24.671]  - MobaXterm version: 10.5 Build 3582
+[20:24.24.672]  - Command line: "C:\Users\ASUS\Desktop\MobaXterm_Personal_10.5.exe"
+[20:24.24.672]  - Win32 version: 10.0.2.15063.
+[20:24.24.672]  - Detected DPI: 96
+[20:24.24.672]  - Current DPI: 96
+[20:24.24.673]  - CurDir: C:\Users\ASUS\Desktop\
+[20:24.24.673]  - PersonalDir: C:\Users\ASUS\DOCUME~1\
+[20:24.24.673]  - AppDataDir: C:\Users\ASUS\AppData\Roaming\
+[20:24.24.674]  - LocalAppDataDir: C:\Users\ASUS\AppData\Roaming\
+[20:24.24.674]  - DesktopDir: C:\Users\ASUS\Desktop\
+[20:24.24.674]  - MobaProfileDir: C:\Users\ASUS\DOCUME~1\
+[20:24.24.674]  - Free space in MobaProfileDir folder: 56889MB
+[20:24.24.674]  - TempDir: C:\Users\ASUS\AppData\Local\Temp\
+[20:24.24.674]  - Free space in TempDir folder: 56889MB
+[20:24.24.674]  - Monitor #0: 1920x1080
+[20:24.24.674]  - Monitor #1: 1920x1080
+[20:24.24.674]  - User name: asus
+[20:24.24.674]  - Computer name: TUNG
+[20:24.24.674]  - CygUtils: NOT PRESENT
+[20:24.24.674]  - Uptime: 1 days, 02:13:51
+[20:24.24.675]  - Windows PATH: C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Users\ASUS\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Java\jdk\bin;C:\Program Files\Java\jre\bin;C:\Program Files\PuTTY\;C:\Users\ASUS\AppData\Local\Microsoft\WindowsApps;
+[20:24.24.675]  
+[20:24.24.675]  BEGIN Form1.FormCreate
+[20:24.24.675]      Detecting installed/portable version
+[20:24.24.675]      --> portable version
+[20:24.24.675]      
+[20:24.24.675]      Detecting IniSettings
+[20:24.24.675]      MobaXterm will take its configuration from file "C:\Users\ASUS\Desktop\MobaXterm.ini".
+[20:24.24.676]      (selected ini file seems to be writeable)
+[20:24.24.676]      --> IniSettings= C:\Users\ASUS\Desktop\MobaXterm.ini
+[20:24.24.676]      
+[20:24.24.681]      Detecting MobaXVTDir
+[20:24.24.681]      BEGIN IsFolderRW(C:\Users\ASUS\AppData\Local\Temp\Mxt105)
+[20:24.24.689]          CreateSymbolicLink(C:\Users\ASUS\AppData\Local\Temp\Mxt105\drives, C:\Users\ASUS\AppData\Local\Temp\Mxt105\cygdrive);
+[20:24.24.694]          CreateSymbolicLink(C:\Users\ASUS\AppData\Local\Temp\Mxt105\drives, C:\Users\ASUS\AppData\Local\Temp\Mxt105\mnt);
+[20:24.24.696]          CreateSymbolicLink(C:\Users\ASUS\AppData\Local\Temp\Mxt105\drives, C:\Users\ASUS\AppData\Local\Temp\Mxt105\media);
+[20:24.24.698]          CreateSymbolicLink(/proc/registry, C:\Users\ASUS\AppData\Local\Temp\Mxt105\registry);
+[20:24.24.703]      END IsFolderRW(C:\Users\ASUS\AppData\Local\Temp\Mxt105) --> OK
+[20:24.24.703]      --> MobaXVTDir= C:\Users\ASUS\AppData\Local\Temp\Mxt105
+[20:24.24.703]      
+[20:24.24.703]      Detecting BinExeDir
+[20:24.24.703]      --> BinExeDir= C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin\
+[20:24.24.703]      --> SessionsDir= C:\Users\ASUS\AppData\Local\Temp\Mxt105\tmp\sessions
+[20:24.24.703]      
+[20:24.24.703]      Detecting MobaXVTHomeDir
+[20:24.24.704]      --> MobaXVTHomeDir= C:\Users\ASUS\AppData\Local\Temp\Mxt105\tmp\home_asus
+[20:24.24.704]      
+[20:24.24.704]      Skin detection
+[20:24.24.704]      Skin selected:
+[20:24.24.704]      Set Application Title
+[20:24.24.751]      - Cygwin1.dll not detected in running applications.
+[20:24.24.751]      
+[20:24.24.751]      Process list:  fontdrvhost.exe, fontdrvhost.exe, igfxCUIService.exe, vpnagent.exe, AsLdrSrv.exe, cmcore.exe, esif_uf.exe, mDNSResponder.exe, OfficeClickToRun.exe, sqlwriter.exe, FoxitConnectedPDFService.exe, ibtsiva.exe, WDDriveService.exe, SecurityHealthService.exe, AppleMobileDeviceService.exe, WindscribeService.exe, MsMpEng.exe, Memory Compression, dasHost.exe, NisSrv.exe, GoogleCrashHandler.exe, GoogleCrashHandler64.exe, HControl.exe, C:\Windows\Temp\DPTF\esif_assist_64.exe, C:\Windows\System32\sihost.exe, ggdllhost.exe, ggdllhost.exe, C:\Windows\System32\taskhostw.exe, C:\Program Files (x86)\ASUS\Splendid\ACMON.exe, DMedia.exe, ATKOSD2.exe, C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe, C:\Windows\System32\RuntimeBroker.exe, C:\Users\ASUS\AppData\Local\CocCoc\Browser\Application\browser.exe, C:\Windows\System32\SettingSyncHost.exe, C:\Program Files (x86)\NVIDIA Corporation\Update Core\NvBackend.exe, C:\Users\ASUS\AppData\Local\CocCoc\Browser\Application\browser.exe, C:\Users\ASUS\AppData\Local\CocCoc\Browser\Application\browser.exe, C:\Program Files\Windows Defender\MSASCuiL.exe, C:\Users\ASUS\AppData\Local\CocCoc\Browser\Application\browser.exe, C:\Users\ASUS\AppData\Local\CocCoc\Browser\Application\browser.exe, C:\Program Files\XWidget\xwidget.exe, C:\Users\ASUS\AppData\Local\CocCoc\Browser\Application\browser.exe, C:\Users\ASUS\AppData\Local\CocCoc\Browser\Application\browser.exe, C:\Users\ASUS\AppData\Local\CocCoc\Browser\Application\browser.exe, C:\Users\ASUS\AppData\Local\CocCoc\Browser\Application\browser.exe, C:\Users\ASUS\AppData\Local\CocCoc\Browser\Application\browser.exe, C:\Users\ASUS\AppData\Local\CocCoc\Browser\Application\browser.exe, C:\Users\ASUS\AppData\Local\CocCoc\Browser\Application\browser.exe, C:\Users\ASUS\AppData\Local\CocCoc\Browser\Application\browser.exe, C:\Users\ASUS\AppData\Local\CocCoc\Browser\Application\browser.exe, C:\Users\ASUS\AppData\Local\CocCoc\Browser\Application\browser.exe, C:\Users\ASUS\AppData\Local\CocCoc\Browser\Application\browser.exe, C:\Program Files (x86)\Cisco\Cisco AnyConnect Secure Mobility Client\vpnui.exe, PresentationFontCache.exe, C:\Windows\System32\DriverStore\FileRepository\igdlh64.inf_amd64_463164d40c3d26ce\igfxEM.exe, C:\Program Files\WindowsApps\Microsoft.SkypeApp_12.13.274.0_x64__kzf8qxf38zg5c\SkypeHost.exe, C:\Users\ASUS\AppData\Local\CocCoc\Browser\Application\browser.exe, C:\Users\ASUS\AppData\Local\CocCoc\Browser\Application\browser.exe, IntelCpHeciSvc.exe, C:\Program Files (x86)\Internet Download Manager\IDMan.exe, C:\Program Files (x86)\ASUS\ASUS Smart Gesture\AsTPCenter\x64\AsusTPLoader.exe, AsusTPHelper.exe, C:\Program Files\Common Files\microsoft shared\ClickToRun\AppVShNotify.exe, SearchIndexer.exe, taskhostw.exe, C:\Windows\SystemApps\Microsoft.Windows.Cortana_cw5n1h2txyewy\SearchUI.exe, C:\Program Files (x86)\ASUS\ASUS Smart Gesture\AsTPCenter\x64\AsusTPCenter.exe, C:\Windows\SystemApps\Microsoft.Windows.Cortana_cw5n1h2txyewy\RemindersServer.exe, C:\Users\ASUS\AppData\Local\CocCoc\Browser\Application\browser.exe, C:\Windows\System32\ApplicationFrameHost.exe, C:\Program Files\WindowsApps\Microsoft.WindowsStore_11712.1001.13.0_x64__8wekyb3d8bbwe\WinStore.App.exe, C:\Program Files\WindowsApps\Microsoft.ZuneVideo_10.17112.13411.0_x64__8wekyb3d8bbwe\Video.UI.exe, C:\Windows\ImmersiveControlPanel\SystemSettings.exe, C:\Program Files\WindowsApps\Microsoft.Windows.Photos_2017.39101.16720.0_x64__8wekyb3d8bbwe\Microsoft.Photos.exe, C:\Users\ASUS\AppData\Local\CocCoc\Update\CocCocUpdate.exe, C:\Users\ASUS\AppData\Local\CocCoc\Update\2.5.15.25\CocCocCrashHandler.exe, C:\Users\ASUS\AppData\Local\CocCoc\Browser\Application\browser.exe, C:\Program Files (x86)\Steam\Steam.exe, C:\Program Files (x86)\Steam\bin\cef\cef.win7\steamwebhelper.exe, SteamService.exe, C:\Program Files (x86)\Steam\bin\cef\cef.win7\steamwebhelper.exe, C:\Program Files (x86)\Steam\bin\cef\cef.win7\steamwebhelper.exe, audiodg.exe, C:\Windows\System32\backgroundTaskHost.exe, C:\Windows\System32\backgroundTaskHost.exe, WmiPrvSE.exe, C:\Windows\System32\smartscreen.exe, sppsvc.exe, SearchProtocolHost.exe, SearchFilterHost.exe, C:\Windows\System32\dllhost.exe, C:\Users\ASUS\Desktop\MobaXterm_Personal_10.5.exe
+[20:24.24.751]      
+[20:24.24.792]      BEGIN ReadCustomIcons
+[20:24.24.792]          No custom icon found.
+[20:24.24.792]      END ReadCustomIcons
+[20:24.24.793]      Generating icons list (size 16)
+[20:24.24.983]      Generating icons list (size 22)
+[20:24.25.242]      Generating icons list (size 64)
+[20:24.25.333]  END Form1.Create
+[20:24.25.333]  
+[20:24.25.333]  
+[20:24.25.334]  CREATING Form4
+[20:24.25.538]  BEGIN Form4.Create
+[20:24.25.544]      NbPingus = 4
+[20:24.25.544]      BEGIN LoadBookmarksFromIni
+[20:24.25.544]          FindOrCreateTreeFolders() (1)
+[20:24.25.548]      END LoadBookmarksFromIni
+[20:24.25.548]      BEGIN LoadMacrosFromIni
+[20:24.25.549]      END LoadMacrosFromIni
+[20:24.25.549]      Form4Create1
+[20:24.25.550]      Form4Create2
+[20:24.25.554]      BEGIN AdaptSidebarArrows
+[20:24.25.554]      END AdaptSidebarArrows
+[20:24.25.556]      Form4Create3
+[20:24.25.557]      GetMinWidth = 924
+[20:24.25.557]      GetMinHeight = 529
+[20:24.25.559]      Form4Create4
+[20:24.25.559]      IsNTFS(C:\) --> NTFS
+[20:24.25.560]      Slash drive is NTFS.
+[20:24.25.560]      Form4Create5
+[20:24.25.561]      Form4Create6
+[20:24.25.561]      Displaysidebarontheleft1Click: FormClick
+[20:24.25.562]      BEGIN AdaptSidebarArrows
+[20:24.25.562]      END AdaptSidebarArrows
+[20:24.25.563]      Form4Create7
+[20:24.25.563]      Form4Create8
+[20:24.25.563]      Form4Create9
+[20:24.25.563]      ShowButtonsbar1Click: FormClick
+[20:24.25.563]      Form4Create10
+[20:24.25.563]      Form4Create12
+[20:24.25.563]      SmallButtons1Click: FormClick
+[20:24.25.565]      GetMinWidth = 924
+[20:24.25.565]      GetMinHeight = 525
+[20:24.25.565]      Form4Create13
+[20:24.25.565]      Form4Create14
+[20:24.25.565]  END Form4.Create
+[20:24.25.565]  
+[20:24.25.565]  
+[20:24.25.565]  CREATING FormParams
+[20:24.25.826]  BEGIN TFormParams.FormCreate
+[20:24.25.828]  END TFormParams.FormCreate
+[20:24.25.828]  
+[20:24.25.828]  
+[20:24.25.828]  CREATING FormSessionEdit
+
+[20:24.26.226]  BEGIN FormSessionEdit.Create
+[20:24.26.270]      BEGIN TFormSessionEdit.FindIP
+[20:24.26.279]      END TFormSessionEdit.FindIP
+[20:24.26.279]      BEGIN SetupEnumAvailableComPorts
+[20:24.26.279]          SetupEnumAvailableComPorts: SetupDiClassGuidsFromName
+[20:24.26.281]          SetupEnumAvailableComPorts: SetupDiGetClassDevs
+[20:24.26.284]          SetupEnumAvailableComPorts: SetupDiEnumDeviceInfo
+[20:24.26.284]          SetupEnumAvailableComPorts: SetupDiDestroyDeviceInfoList
+[20:24.26.284]      END SetupEnumAvailableComPorts
+[20:24.26.288]  END FormSessionEdit.Create
+[20:24.26.288]  
+[20:24.26.288]  
+[20:24.26.288]  CREATING FormTransparente
+[20:24.26.292]  
+[20:24.26.292]  
+[20:24.26.292]  CREATING FormHotKeys
+[20:24.26.324]  BEGIN TFormHotKeys.FormCreate
+[20:24.26.324]  END TFormHotKeys.FormCreate
+[20:24.26.324]  
+[20:24.26.324]  
+[20:24.26.324]  CREATING FormDownloadBloquant
+[20:24.26.332]  
+[20:24.26.332]  
+[20:24.26.332]  CREATING FormStorePasswords
+[20:24.26.348]  
+[20:24.26.349]  
+[20:24.26.349]  CREATING FormInputDialog
+[20:24.26.356]  
+[20:24.26.356]  
+[20:24.26.356]  CREATING FormMsgDialog
+[20:24.26.362]  
+[20:24.26.362]  
+[20:24.26.362]  CREATING FormSyntax
+[20:24.26.380]  
+[20:24.26.381]  
+[20:24.26.381]  CREATING FormMasterPassword
+[20:24.26.388]  
+[20:24.26.388]  
+[20:24.26.388]  CREATING FormTermConfirmClose
+[20:24.26.394]  
+[20:24.26.394]  
+[20:24.26.394]  CREATING FormManagePasswords
+[20:24.26.408]  BEGIN TFormManagePasswords.FormCreate
+[20:24.26.408]  END TFormManagePasswords.FormCreate
+[20:24.26.408]  
+[20:24.26.408]  
+[20:24.26.408]  DONE CREATING FORMS
+[20:24.26.408]  
+[20:24.26.408]  
+[20:24.26.408]  
+[20:24.26.408]  
+[20:24.26.409]  BEGIN Form1.Show
+[20:24.26.409]  END Form1.Show
+[20:24.26.449]  
+[20:24.26.449]  Launching Form1.Timer1Timer
+[20:24.26.449]  
+[20:24.26.449]  
+[20:24.26.449]  
+[20:24.26.450]  
+[20:24.26.450]  ================================================================================
+[20:24.26.450]  ~    INI file content (C:\Users\ASUS\Desktop\MobaXterm.ini)    ~
+[20:24.26.450]  ================================================================================
+[20:24.26.450]  
+[20:24.26.450]  
+[Misc]
+LastSession=cs1.utdallas.edu|#109#0%cs1.utdallas.edu%22%%%-1%-1%%%22%%0%-1%0%%%-1%0%0%0%%1080%%0%0%1#MobaFont%10%0%0%0%15%236,236,236%0,0,0%180,180,192%0%-1%0%%xterm%-1%0%0,0,0%54,54,54%255,96,96%255,128,128%96,255,96%128,255,128%255,255,54%255,255,128%96,96,255%128,128,255%255,54,255%255,128,255%54,255,255%128,255,255%236,236,236%255,255,255%80%24%0%1%-1%<none>%%0#0#
+SessionP=394464591028
+
+[Recently started]
+16=
+15=
+14=
+13=
+12=
+11=
+10=
+9=
+8=
+7=
+6=
+5=ASUS.Tung
+4=as
+3=ASUS.TUNG
+2=cs2.utdallas.edu
+1=cs1.utdallas.edu
+
+[Services]
+TFTPRootDir=_MyDocuments_\
+TFTPCheck1=1
+TFTPCheck2=1
+SpinTFTPPort=69
+SpinTFTPTimeout=360
+CheckTFTPTimeout=1
+FTPRootDir=_MyDocuments_\
+SpinFTPPort=21
+FTPLogin=mobaxterm
+FTPPassHed=PhfA
+FTPCheck1=1
+FTPCheck2=0
+FTPCheck3=0
+SpinFTPTimeout=360
+CheckFTPTimeout=1
+ChkFtpConfirmation=1
+HTTPRootDir=_MyDocuments_\
+HTTPCheck1=1
+HTTPCheck2=0
+SpinHTTPPort=80
+SpinHTTPTimeout=360
+CheckHTTPTimeout=1
+SpinSSHPort=22
+CheckSSHTimeout=1
+SpinSSHTimeout=360
+SpinTelnetPort=23
+CheckTelnetTimeout=1
+SpinTelnetTimeout=360
+TelnetPassHed=uMB
+ChkTelnetConfirmation=1
+CheckNFSTimeout=1
+SpinNFSTimeout=360
+CheckVNCTimeout=1
+SpinVNCTimeout=360
+sEdit1Hed=YPb
+SpinVNCPort=5900
+SpinVNCHTTPPort=5800
+SpinCronTimeout=360
+CheckCronTimeout=1
+StartCronAtStartup=0
+CheckIperfTimeout=1
+SpinIperfTimeout=360
+sSpinEdit3=80
+CheckRsyncTimeout=1
+SpinRsyncTimeout=360
+sDirectoryEdit2=
+
+[WindowPos_TUNG_2_1920]
+CompactMode=0
+MonitorCount=2
+Left=0
+Top=0
+Width=1936
+Height=1056
+Maximized=1
+SidebarVisible=1
+SidebarWidth=240
+
+[Display]
+SidebarRight=0
+C10Checked=1
+C11Checked=1
+C12Checked=1
+C13Checked=0
+C14Checked=0
+VisibleTabNum=1
+VisibleTabClose=1
+MenuAndButtons=2
+BtnType2=2
+
+[SSH]
+SFTPShowDotFiles=1
+SFTPAsciiMode=0
+
+[Bookmarks]
+SubRep=
+ImgNum=42
+as=#109#0%as%22%%%-1%-1%%%22%%0%-1%0%%%-1%0%0%0%%1080%%0%0%1#MobaFont%10%0%0%0%15%236,236,236%0,0,0%180,180,192%0%-1%0%%xterm%-1%0%0,0,0%54,54,54%255,96,96%255,128,128%96,255,96%128,255,128%255,255,54%255,255,128%96,96,255%128,128,255%255,54,255%255,128,255%54,255,255%128,255,255%236,236,236%255,255,255%80%24%0%1%-1%<none>%%0#0#
+ASUS.TUNG=#109#0%ASUS.TUNG%22%%%-1%-1%%%22%%0%-1%0%%%-1%0%0%0%%1080%%0%0%1#MobaFont%10%0%0%0%15%236,236,236%0,0,0%180,180,192%0%-1%0%%xterm%-1%0%0,0,0%54,54,54%255,96,96%255,128,128%96,255,96%128,255,128%255,255,54%255,255,128%96,96,255%128,128,255%255,54,255%255,128,255%54,255,255%128,255,255%236,236,236%255,255,255%80%24%0%1%-1%<none>%%0#0#
+cs1.utdallas.edu=#109#0%cs1.utdallas.edu%22%%%-1%-1%%%22%%0%-1%0%%%-1%0%0%0%%1080%%0%0%1#MobaFont%10%0%0%0%15%236,236,236%0,0,0%180,180,192%0%-1%0%%xterm%-1%0%0,0,0%54,54,54%255,96,96%255,128,128%96,255,96%128,255,128%255,255,54%255,255,128%96,96,255%128,128,255%255,54,255%255,128,255%54,255,255%128,255,255%236,236,236%255,255,255%80%24%0%1%-1%<none>%%0#0#
+cs2.utdallas.edu=#109#0%cs2.utdallas.edu%22%%%-1%-1%%%22%%0%-1%0%%%-1%0%0%0%%1080%%0%0%1#MobaFont%10%0%0%0%15%236,236,236%0,0,0%180,180,192%0%-1%0%%xterm%-1%0%0,0,0%54,54,54%255,96,96%255,128,128%96,255,96%128,255,128%255,255,54%255,255,128%96,96,255%128,128,255%255,54,255%255,128,255%54,255,255%128,255,255%236,236,236%255,255,255%80%24%0%1%-1%<none>%%0#0#
+
+[LastInstanceSessions]
+0=
+1=cs1.utdallas.edu
+
+[20:24.26.458]  
+[20:24.26.459]  
+[20:24.26.459]  ================================================================================
+[20:24.26.459]  
+[20:24.26.459]  
+[20:24.26.459]  
+[20:24.26.459]  
+[20:24.26.459]  BEGIN CreerFstab
+[20:24.26.459]      CreerFstab: RootDirectory = C:/Users/ASUS/AppData/Local/Temp/Mxt105
+[20:24.26.460]      CreerFstab: HomeDirectory = C:/Users/ASUS/AppData/Local/Temp/Mxt105/tmp/HOME_A~1
+[20:24.26.465]  END CreerFstab
+[20:24.26.465]  BEGIN extraireFichiers1
+[20:24.26.465]      BEGIN CreerProfile
+[20:24.26.486]      END CreerProfile
+[20:24.26.486]      BEGIN CreerSshConfig
+[20:24.26.490]      END CreerSshConfig
+[20:24.26.490]      BEGIN CreerBaseProfile
+[20:24.26.503]          NEW PLUGIN: mobase
+[20:24.26.503]          BEGIN ProcessPlugin(mobase)
+[20:24.26.505]          END ProcessPlugin(mobase)
+[20:24.26.536]      END CreerBaseProfile
+[20:24.26.536]      BEGIN MkGroupFile
+[20:24.26.536]          BEGIN GetLocalGroups
+[20:24.26.538]          END GetLocalGroups
+[20:24.26.544]          SaveStringListToUnixFile(C:\Users\ASUS\AppData\Local\Temp\Mxt105\etc\group)
+[20:24.26.549]          MkGroupFile OK
+[20:24.26.549]      END MkGroupFile
+[20:24.26.549]      BEGIN MkPasswdFile
+[20:24.26.550]          Current Domain: TUNG
+[20:24.26.550]          BEGIN Bui_GetWindowsUsersAccount
+[20:24.26.550]          END Bui_GetWindowsUsersAccount
+[20:24.26.555]          MkPasswdFile OK
+[20:24.26.555]      END MkPasswdFile
+[20:24.26.556]      BEGIN CreerNsswitch
+[20:24.26.560]      END CreerNsswitch
+[20:24.26.560]      Request for file extraction: /bin/scrdaemons
+[20:24.26.560]      CreateSymbolicLink(C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin\scrdaemons, C:\Users\ASUS\AppData\Local\Temp\Mxt105\etc\init.d\tftp);
+[20:24.26.564]      CreateSymbolicLink(C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin\scrdaemons, C:\Users\ASUS\AppData\Local\Temp\Mxt105\etc\init.d\ftp);
+[20:24.26.566]      CreateSymbolicLink(C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin\scrdaemons, C:\Users\ASUS\AppData\Local\Temp\Mxt105\etc\init.d\http);
+[20:24.26.568]      CreateSymbolicLink(C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin\scrdaemons, C:\Users\ASUS\AppData\Local\Temp\Mxt105\etc\init.d\ssh);
+[20:24.26.570]      CreateSymbolicLink(C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin\scrdaemons, C:\Users\ASUS\AppData\Local\Temp\Mxt105\etc\init.d\telnet);
+[20:24.26.572]      CreateSymbolicLink(C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin\scrdaemons, C:\Users\ASUS\AppData\Local\Temp\Mxt105\etc\init.d\nfs);
+[20:24.26.573]      CreateSymbolicLink(C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin\scrdaemons, C:\Users\ASUS\AppData\Local\Temp\Mxt105\etc\init.d\vnc);
+[20:24.26.576]      Request for file extraction: /bin/cygtermd.exe
+[20:24.26.577]      Request for file extraction: /bin/cygz.dll
+[20:24.26.577]      Request for file extraction: /bin/cyggcc_s-1.dll
+[20:24.26.578]      Request for file extraction: /bin/cygwin-console-helper.exe
+[20:24.26.578]      Request for file extraction: /bin/ssh.exe
+[20:24.26.579]      Request for file extraction: /etc/bash.bash_logout
+[20:24.26.579]      Request for file extraction: /etc/profile.d
+[20:24.26.580]      Request for file extraction: /etc/profile.d/*
+[20:24.26.580]      CreerRaccourciVersMobaXterm(C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin\MobaListPorts, -listports);
+[20:24.26.584]      CreerRaccourciVersMobaXterm(C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin\MobaPictureViewer, -picview);
+[20:24.26.589]      CreerRaccourciVersMobaXterm(C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin\MobaCalc, -calc);
+[20:24.26.590]      CreerRaccourciVersMobaXterm(C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin\MobaTextEditor, -edit);
+[20:24.26.595]      CreerRaccourciVersMobaXterm(C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin\MobaCompareFiles, -compfiles);
+[20:24.26.600]      CreerRaccourciVersMobaXterm(C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin\MobaCompareFolders, -compfolders);
+[20:24.26.605]      Request for file extraction: /usr/share/terminfo/78/xterm
+[20:24.26.606]      Request for file extraction: /usr/share/terminfo/63/cygwin
+[20:24.26.606]      Request for file extraction: /etc/bash_completion
+[20:24.26.607]      Request for file extraction: /usr/share/zoneinfo/posixrules
+[20:24.26.617]      File posixrules extracted successfully.
+[20:24.26.618]      Request for file extraction: /etc/inputrc
+[20:24.26.618]  END extraireFichiers1
+[20:24.26.618]  CreateSymbolicLink(/proc/registry, C:\Users\ASUS\AppData\Local\Temp\Mxt105\registry);
+[20:24.26.620]  CreateSymbolicLink(C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin\bash.exe, C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin\sh);
+[20:24.26.624]  CreateSymbolicLink(C:\WINDOWS\system32\drivers\etc\hosts, C:\Users\ASUS\AppData\Local\Temp\Mxt105\etc\hosts);
+[20:24.26.628]  CreateSymbolicLink(C:\WINDOWS\system32\drivers\etc\networks, C:\Users\ASUS\AppData\Local\Temp\Mxt105\etc\networks);
+[20:24.26.643]  CreateSymbolicLink(C:\WINDOWS\system32\drivers\etc\protocol, C:\Users\ASUS\AppData\Local\Temp\Mxt105\etc\protocol);
+[20:24.26.648]  CreateSymbolicLink(C:\WINDOWS\system32\drivers\etc\services, C:\Users\ASUS\AppData\Local\Temp\Mxt105\etc\services);
+[20:24.26.652]  CreateSymbolicLink(C:\Users\ASUS\Desktop\, C:\Users\ASUS\AppData\Local\Temp\Mxt105\tmp\home_asus\Desktop);
+[20:24.26.656]  CreateSymbolicLink(C:\Users\ASUS\DOCUME~1\, C:\Users\ASUS\AppData\Local\Temp\Mxt105\tmp\home_asus\MyDocuments);
+[20:24.26.658]  CreateSymbolicLink(C:\Users\ASUS\Desktop\, C:\Users\ASUS\AppData\Local\Temp\Mxt105\tmp\home_asus\LauncherFolder);
+[20:24.26.664]  CreateSymbolicLink(C:\Users\ASUS\AppData\Local\Temp\Mxt105\drives, C:\Users\ASUS\AppData\Local\Temp\Mxt105\cygdrive);
+[20:24.26.666]  CreateSymbolicLink(C:\Users\ASUS\AppData\Local\Temp\Mxt105\drives, C:\Users\ASUS\AppData\Local\Temp\Mxt105\mnt);
+[20:24.26.668]  CreateSymbolicLink(C:\Users\ASUS\AppData\Local\Temp\Mxt105\drives, C:\Users\ASUS\AppData\Local\Temp\Mxt105\media);
+[20:24.26.671]  BEGIN LoadSharedSessions
+[20:24.26.672]      BEGIN TFormManagePasswords.sRadioButton4Click
+[20:24.26.672]      END TFormManagePasswords.sRadioButton4Click
+[20:24.26.673]  END LoadSharedSessions
+[20:24.26.673]  BEGIN LoadSharedSessions
+[20:24.26.673]  END LoadSharedSessions
+[20:24.26.675]  BEGIN RecreateBookmarksMenus
+[20:24.26.675]      RecreateBookmarksMenus: FreeBookmarksMenuItems(Form1.Xserver3)
+[20:24.26.675]      RecreateBookmarksMenus: FreeBookmarksMenuItems(Bookmarks1)
+[20:24.26.675]      sTreeView1.assign(Treesessions)
+[20:24.26.675]      Detecting SheetSessions width
+[20:24.26.676]      Create session menu items
+[20:24.26.679]      Create aliases
+[20:24.26.691]      TreeSessions.Expand
+[20:24.26.691]  END RecreateBookmarksMenus
+[20:24.26.693]  BEGIN WaitForAllThreads
+[20:24.26.693]  END WaitForAllThreads
+[20:24.26.709]  
+[20:24.26.710]  BEGIN Form4.FormActivate
+[20:24.26.710]      Form4.FormActivate0: First time window activation
+[20:24.26.726]      Form4.FormActivate1
+[20:24.26.739]      Form4.FormActivate2
+[20:24.26.749]      Form4.FormActivate3
+[20:24.26.759]      Form4.FormActivate4
+[20:24.26.759]      Form4.FormActivate5
+[20:24.26.759]      Registering global show/hide hotkey
+[20:24.26.759]      Registering global show/hide popup terminal
+[20:24.26.759]      BEGIN LoadParamsFromIni: C:\Users\ASUS\Desktop\MobaXterm.ini
+[20:24.26.759]          LoadParamsFromIni: ComboFontName.Font.Name:=MobaFont
+[20:24.26.759]          LoadParamsFromIni: ComboFontName.ItemIndex:=14
+[20:24.26.760]          LoadParamsFromIni: ComboFontName.Font.Charset:=0
+[20:24.26.760]          LoadParamsFromIni1
+[20:24.26.762]          LoadParamsFromIni2
+[20:24.26.764]          LoadParamsFromIni9
+[20:24.26.764]          LoadParamsFromIni10
+[20:24.26.767]          LoadParamsFromIni11
+[20:24.26.767]          LoadParamsFromIni12
+[20:24.26.768]          LoadParamsFromIni13
+[20:24.26.768]          LoadParamsFromIni14
+[20:24.26.789]          LoadParamsFromIni15
+[20:24.26.789]          LoadParamsFromIni16
+[20:24.26.790]      END LoadParamsFromIni
+[20:24.26.790]      Form4.FormActivate: OldMaximized:=Form4.WindowState
+[20:24.26.790]      Form4.FormActivate: TermImage.Canvas.Font.Assign(MobaFont)
+[20:24.26.790]      Form4.FormActivate: TermImage.Canvas.Font.Size:=10
+[20:24.26.790]      Form4.FormActivate: TermImage.Canvas.Font.Name:=MobaFont
+[20:24.26.790]      Form4.FormActivate: Starting "GetMinHeight"
+[20:24.26.791]      GetMinHeight = 525
+[20:24.26.791]      Form4.FormActivate: Form4.Constraints.MinHeight:=525
+[20:24.26.791]      GetMinWidth = 924
+[20:24.26.791]      Form4.FormActivate: Form4.Constraints.MinWidth:=924
+[20:24.26.791]      Form4.FormActivate: Form4.Left:=506
+[20:24.26.791]      BEGIN GetNextAvailableX
+[20:24.26.791]      END GetNextAvailableX = 0
+[20:24.26.791]      
+[20:24.26.792]      CurrentX = 0
+[20:24.26.792]      ChDir(Form1.BaseDir): C:\Users\ASUS\Desktop\
+[20:24.26.792]      FirstParam:
+[20:24.26.792]      Launching NewTab
+[20:24.26.792]      
+[20:24.26.792]      BEGIN NEWTAB(home, 135, 0)
+[20:24.26.802]          NEWTAB: Application.ProcessMessages
+[20:24.26.803]          NEWTAB: Timer1_Disable
+[20:24.26.830]          
+[20:24.26.830]          BEGIN Form4.FormActivate
+[20:24.26.830]          END Form4.FormActivate
+[20:24.26.830]          
+[20:24.26.843]          BEGIN TFormXterm.FormResize
+[20:24.26.843]              TFormXterm.FormResize: CenterBtnReattachTab
+[20:24.26.843]              TFormXterm.FormResize: SplitModeResize
+[20:24.26.843]              TFormXterm.FormResize: TabMax<=0. Exiting...
+[20:24.26.844]          END TFormXterm.FormResize
+[20:24.26.844]          BEGIN WMSize
+[20:24.26.844]              BEGIN TFormXterm.FormResize
+[20:24.26.844]                  TFormXterm.FormResize: CenterBtnReattachTab
+[20:24.26.844]                  TFormXterm.FormResize: SplitModeResize
+[20:24.26.844]                  TFormXterm.FormResize: TabMax<=0. Exiting...
+[20:24.26.844]              END TFormXterm.FormResize
+[20:24.26.844]          END WMSize
+[20:24.26.847]          NEWTAB: Verifying if max number of tabs has been reached...
+[20:24.26.847]          NEWTAB: Creating SFTPRecord...
+[20:24.26.854]          NEWTAB: Creating menu items and popup entries for new tab...
+[20:24.26.854]          NEWTAB: Trying to find OldIndice...
+[20:24.26.855]          NEWTAB: Cts1.BeginUpdate;
+[20:24.26.855]          NEWTAB: Creating new tab...
+[20:24.26.855]          NEWTAB:        Tab index: 0
+[20:24.26.855]          NEWTAB:        NumTerm  : 1
+[20:24.26.855]          NEWTAB:        Title    : Home
+[20:24.26.855]          NEWTAB:        Command  : home
+[20:24.26.855]          Cts1ActiveTabChanged: New index = 0
+[20:24.26.855]          NEWTAB: Cts1.EndUpdates
+[20:24.26.878]          NEWTAB: Changing tab index A = 0
+[20:24.26.878]          BEGIN WaitForAllThreads
+[20:24.26.878]          END WaitForAllThreads
+[20:24.26.878]          
+[20:24.26.878]          LaunchTabContent(home, Home);
+[20:24.26.879]          
+[20:24.26.879]          SetEnvironmentVariable(LOCALE, en_US.UTF-8)
+[20:24.26.879]          SetEnvironmentVariable(PATH, C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin;C:\WINDOWS\;C:\WINDOWS\system32\)
+[20:24.26.879]          Enabling MOBANOACL
+[20:24.26.879]          
+[20:24.26.879]          ShellExecute: motty.exe
+[20:24.26.879]          
+[20:24.26.879]          CreerSessionMoTTY(1, home, Home)
+[20:24.26.880]          Setting LOCALE=en_US.UTF-8
+[20:24.26.887]          CreerSessionMoTTY(-1, TCPCapture, TCPCapture)
+[20:24.26.887]          Setting LOCALE=en_US.UTF-8
+[20:24.26.963]          
+[20:24.26.964]          FindWindow()
+[20:24.26.964]          Moxt2.SetParent
+[20:24.27.114]          NEWTAB: Application.OnMessage:=AppMessage
+[20:24.27.116]          NEWTAB: Changing tab index C = 0
+[20:24.27.116]          NEWTAB: Launching DisplayCurrentTab...
+[20:24.27.116]          BEGIN DisplayCurrentTab
+[20:24.27.116]              DisplayCurrentTab: FormClick
+[20:24.27.116]              (SSH-Browser) DisplayCurrentTab(0): ActiverPanel14
+[20:24.27.116]              (SSH-Browser) BEGIN ActiverPanel14
+[20:24.27.117]              (SSH-Browser) BEGIN DesactiverPanel14
+[20:24.27.117]              (SSH-Browser) END DesactiverPanel14
+[20:24.27.117]              (SSH-Browser) END ActiverPanel14;
+[20:24.27.117]              DisplayCurrentTab: Cts1.BeginUpdate;
+[20:24.27.117]              DisplayCurrentTab: Cts1.EndUpdates
+[20:24.27.117]              DisplayCurrentTab: Show selected tab
+[20:24.27.201]              BEGIN ResizeTerminal
+[20:24.27.201]              END ResizeTerminal
+[20:24.27.201]              DisplayCurrentTab: Hide other tabs
+[20:24.27.201]              DisplayCurrentTab: Adapting buttons enable/disable states
+[20:24.27.202]              DisplayCurrentTab: DeterminerBoutonDetachOuReattach
+[20:24.27.202]              DisplayCurrentTab: DistribuerLeFocus
+[20:24.27.204]              BEGIN WMNewTab: 0
+[20:24.27.204]                  WMNewTab: FormClick
+[20:24.27.205]                  WMNewTab: LooseFocus
+[20:24.27.205]              END WMNewTab: 0
+[20:24.27.205]              BEGIN WMNewTab: 0
+[20:24.27.205]                  WMNewTab: FormClick
+[20:24.27.205]                  WMNewTab: LooseFocus
+[20:24.27.205]              END WMNewTab: 0
+[20:24.27.205]              BEGIN WMNewTab: 0
+[20:24.27.205]                  WMNewTab: FormClick
+[20:24.27.205]                  WMNewTab: LooseFocus
+[20:24.27.206]              END WMNewTab: 0
+[20:24.27.206]              BEGIN WMNewTab: 0
+[20:24.27.206]                  WMNewTab: FormClick
+[20:24.27.206]                  WMNewTab: LooseFocus
+[20:24.27.206]              END WMNewTab: 0
+[20:24.27.209]          END DisplayCurrentTab
+[20:24.27.209]          NEWTAB: NewTab_ReEnable_Timer1
+[20:24.27.209]          NEWTAB: MajVerticalTabs
+[20:24.27.209]          NEWTAB: Cts1.Resize;
+[20:24.27.213]      END NEWTAB(home, 135, 0)
+[20:24.27.213]      
+[20:24.27.213]      
+[20:24.27.213]      Launching bookmarks();
+[20:24.27.213]      Launching sBitBtn7Click(sBitBtn7);
+[20:24.27.213]      
+[20:24.27.213]      BEGIN LaunchX11();
+[20:24.27.214]          BEGIN MobaThreadXressources.Execute(nil);
+[20:24.27.214]          END MobaThreadXressources.Execute(nil);
+
+
+[20:24.28.797]          BEGIN ExecuteSelectedSession
+[20:24.28.798]              ExecuteSelectedSession: FormClick
+[20:24.28.803]              ExecuteSelectedSession0
+[20:24.28.803]              ExecuteSelectedSession1
+[20:24.28.803]              ExecuteSelectedSession2
+[20:24.28.804]              ExecuteSelectedSession3
+[20:24.28.804]              BEGIN ChargerLaSession
+[20:24.28.862]                  ChargerLaSession1
+[20:24.28.873]                  ChargerLaSession2
+[20:24.28.873]                  ChargerLaSession3
+[20:24.28.874]                  ChargerLaSession4
+[20:24.28.874]                  ChargerLaSession5
+[20:24.28.874]                  ChargerLaSession6
+[20:24.28.884]                  ChargerLaSession7
+[20:24.28.884]                  ChargerLaSession8
+[20:24.28.884]                  ChargerLaSession8_ssh_1
+[20:24.28.884]                  ChargerLaSession8_ssh_2
+[20:24.28.884]                  ChargerLaSession8_ssh_3
+[20:24.28.885]                  ChargerLaSession8_ssh_4
+[20:24.28.885]                  ChargerLaSession9
+[20:24.28.906]                  ChargerLaSession10
+[20:24.28.906]              END ChargerLaSession
+[20:24.28.907]              ExecuteSelectedSession4
+[20:24.28.907]              LaunchSession0
+[20:24.28.907]              LaunchSession1
+[20:24.28.907]              LaunchSession4
+[20:24.28.920]              LaunchSession5
+[20:24.28.921]              
+[20:24.28.921]              BEGIN NEWTAB(ssh "cs1.utdallas.edu" -l PleaseAskMe -p 22 -Y -o ForwardX11Trusted=yes -o ForwardX11=yes  -C -o Compression=yes  -Z , 109, 0)
+[20:24.28.921]                  NEWTAB: Application.ProcessMessages
+[20:24.28.932]                  NEWTAB: Timer1_Disable
+[20:24.28.932]                  NEWTAB: Verifying if max number of tabs has been reached...
+[20:24.28.958]                  NEWTAB: Creating SFTPRecord...
+[20:24.28.971]                  NEWTAB: Creating menu items and popup entries for new tab...
+[20:24.28.971]                  NEWTAB: Trying to find OldIndice...
+[20:24.28.971]                  NEWTAB: Cts1.BeginUpdate;
+[20:24.28.986]                  NEWTAB: Creating new tab...
+[20:24.28.986]                  NEWTAB:        Tab index: 1
+[20:24.28.986]                  NEWTAB:        NumTerm  : 2
+[20:24.28.986]                  NEWTAB:        Title    : cs1.utdallas.edu
+[20:24.28.986]                  NEWTAB:        Command  : ssh "cs1.utdallas.edu" -l PleaseAskMe -p 22 -Y -o ForwardX11Trusted=yes -o ForwardX11=yes  -C -o Compression=yes  -Z
+[20:24.28.986]                  Cts1ActiveTabChanged: New index = 1
+[20:24.28.986]                  NEWTAB: Cts1.EndUpdates
+[20:24.28.990]                  NEWTAB: Changing tab index A = 1
+[20:24.29.000]                  BEGIN WaitForAllThreads
+[20:24.29.000]                      BEGIN ExecuteSelectedSession
+[20:24.29.000]                          ExecuteSelectedSession: FormClick
+[20:24.29.000]                          ExecuteSelectedSession0
+[20:24.29.001]                          ExecuteSelectedSession1
+[20:24.29.001]                          ExecuteSelectedSession2
+[20:24.29.001]                          ExecuteSelectedSession3
+[20:24.29.001]                          BEGIN ChargerLaSession
+[20:24.29.002]                              ChargerLaSession1
+[20:24.29.013]                              ChargerLaSession2
+[20:24.29.014]                              ChargerLaSession3
+[20:24.29.014]                              ChargerLaSession4
+[20:24.29.014]                              ChargerLaSession5
+[20:24.29.014]                              ChargerLaSession6
+[20:24.29.015]                              ChargerLaSession7
+[20:24.29.016]                              ChargerLaSession8
+[20:24.29.016]                              ChargerLaSession8_ssh_1
+[20:24.29.016]                              ChargerLaSession8_ssh_2
+[20:24.29.026]                              ChargerLaSession8_ssh_3
+[20:24.29.035]                              ChargerLaSession8_ssh_4
+[20:24.29.035]                              ChargerLaSession9
+[20:24.29.041]                              ChargerLaSession10
+[20:24.29.049]                          END ChargerLaSession
+[20:24.29.049]                          ExecuteSelectedSession4
+[20:24.29.049]                          LaunchSession0
+[20:24.29.049]                          LaunchSession1
+[20:24.29.049]                          LaunchSession4
+[20:24.29.063]                          LaunchSession5
+[20:24.29.063]                          
+[20:24.29.063]                          BEGIN NEWTAB(ssh "cs1.utdallas.edu" -l PleaseAskMe -p 22 -Y -o ForwardX11Trusted=yes -o ForwardX11=yes  -C -o Compression=yes  -Z , 109, 0)
+[20:24.29.064]                              NEWTAB: Application.ProcessMessages
+[20:24.29.075]                              NEWTAB: Timer1_Disable
+[20:24.29.075]                              NEWTAB: Verifying if max number of tabs has been reached...
+[20:24.29.078]                              NEWTAB: Creating SFTPRecord...
+[20:24.29.097]                              NEWTAB: Creating menu items and popup entries for new tab...
+[20:24.29.097]                              NEWTAB: Trying to find OldIndice...
+[20:24.29.097]                              NEWTAB: Cts1.BeginUpdate;
+[20:24.29.097]                              NEWTAB: Creating new tab...
+[20:24.29.097]                              NEWTAB:        Tab index: 2
+[20:24.29.097]                              NEWTAB:        NumTerm  : 3
+[20:24.29.097]                              NEWTAB:        Title    : cs1.utdallas.edu
+[20:24.29.097]                              NEWTAB:        Command  : ssh "cs1.utdallas.edu" -l PleaseAskMe -p 22 -Y -o ForwardX11Trusted=yes -o ForwardX11=yes  -C -o Compression=yes  -Z
+[20:24.29.098]                              Cts1ActiveTabChanged: New index = 2
+[20:24.29.098]                              NEWTAB: Cts1.EndUpdates
+[20:24.29.110]                              NEWTAB: Changing tab index A = 2
+[20:24.29.111]                              BEGIN WaitForAllThreads
+
+
+[20:24.32.425]                                  Cts1MouseDown: FormClick
+[20:24.32.428]                                  Cts1ActiveTabChanged: New index = 1
+
+[20:24.33.007]                              END WaitForAllThreads
+[20:24.33.008]                              
+[20:24.33.008]                              LaunchTabContent(ssh "cs1.utdallas.edu" -l PleaseAskMe -p 22 -Y -o ForwardX11Trusted=yes -o ForwardX11=yes  -C -o Compression=yes  -Z , cs1.utdallas.edu);
+[20:24.33.008]                              
+[20:24.33.008]                              SetEnvironmentVariable(LOCALE, en_US.UTF-8)
+[20:24.33.009]                              SetEnvironmentVariable(PATH, C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin;C:\WINDOWS\;C:\WINDOWS\system32\)
+[20:24.33.009]                              Enabling MOBANOACL
+[20:24.33.009]                              
+[20:24.33.009]                              ShellExecute: motty.exe
+[20:24.33.009]                              
+[20:24.33.010]                              CreerSessionMoTTY(3, ssh "cs1.utdallas.edu" -l PleaseAskMe -p 22 -Y -o ForwardX11Trusted=yes -o ForwardX11=yes  -C -o Compression=yes  -Z , cs1.utdallas.edu)
+[20:24.33.010]                              Request for file extraction: /bin/motty.exe
+[20:24.33.152]                              File motty.exe extracted successfully.
+[20:24.33.154]                              SetEnvironmentVariable(LOCALE, en_US.UTF-8)
+[20:24.33.155]                              SetEnvironmentVariable(PATH, C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin;C:\WINDOWS\;C:\WINDOWS\system32\;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Java\jdk\bin;C:\Program Files\Java\jre\bin;C:\Program Files\PuTTY\;C:\Users\ASUS\AppData\Local\Microsoft\WindowsApps)
+[20:24.33.156]                              Enabling MOBANOACL
+[20:24.33.162]                              Request for file extraction: /bin/cygtermd.exe
+[20:24.33.162]                              File not found:  C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin\cygtermd.exe
+[20:24.33.162]                              File not found:  C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin\cygwin1.dll
+[20:24.33.162]                              File not found:  C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin\bash.exe
+[20:24.33.163]                              File not found:  C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin\busybox.exe
+[20:24.33.168]                              BEGIN ShellExecuteS(C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin\motty.exe, -load "C:\Users\ASUS\AppData\Local\Temp\Mxt105\tmp\sessions\TERM17063203")
+[20:24.33.316]                                  Cts1MouseDown: FormClick
+[20:24.33.374]                                  BEGIN TFormXterm.Cts1ButtonCloseTabClick
+[20:24.33.374]                                      
+[20:24.33.374]                                      BEGIN CloseTab(1)
+[20:24.33.374]  CloseTab:  Tab is external app
+[20:24.33.374]  CloseTab:  Delete MobaScript file
+[20:24.33.375]  CloseTab:  Close TFormDetachedTab
+[20:24.33.375]  CloseTab: Cts1.BeginUpdate;
+[20:24.33.375]  CloseTab: Cts1.Tabs.Delete(1);
+[20:24.33.375]  Cts1ActiveTabChanged: New index = 1
+[20:24.33.375]  CloseTab: Cts1.Tabs.Delete(1);
+[20:24.33.375]  (SSH-Browser) TabSFTP[1].Free;
+[20:24.33.375]  Freeing object TMobaThread
+[20:24.33.375]  Freeing object TElSftpClient
+[20:24.33.375]  Freeing object TElSSHClient
+[20:24.33.375]  Freeing object TElSocket
+[20:24.33.375]  Freeing object TListView
+[20:24.33.377]  Freeing object TElSSHTunnelList
+[20:24.33.377]  Freeing object TElSubsystemSSHTunnel
+[20:24.33.377]  Freeing object TList
+[20:24.33.377]  Freeing object TTimer
+[20:24.33.379]  BEGIN DisplayCurrentTab
+[20:24.33.379]      DisplayCurrentTab: FormClick
+[20:24.33.379]      (SSH-Browser) DisplayCurrentTab(1): ActiverPanel14
+[20:24.33.379]      (SSH-Browser) BEGIN ActiverPanel14
+[20:24.33.380]      (SSH-Browser) BEGIN DesactiverPanel14
+[20:24.33.380]      (SSH-Browser) END DesactiverPanel14
+[20:24.33.380]      (SSH-Browser) END ActiverPanel14;
+[20:24.33.380]      DisplayCurrentTab: Cts1.BeginUpdate;
+[20:24.33.380]      DisplayCurrentTab: Cts1.EndUpdates
+[20:24.33.382]      DisplayCurrentTab: Show selected tab
+[20:24.33.382]      DisplayCurrentTab: Hide other tabs
+[20:24.33.383]      DisplayCurrentTab: Adapting buttons enable/disable states
+[20:24.33.386]      DisplayCurrentTab: DeterminerBoutonDetachOuReattach
+[20:24.33.386]      DisplayCurrentTab: DistribuerLeFocus
+[20:24.33.386]  END DisplayCurrentTab
+[20:24.33.386]  END CloseTab(1)
+[20:24.33.386]  
+[20:24.33.387]  END TFormXterm.Cts1ButtonCloseTabClick
+[20:24.33.400]  Cts1MouseDown: FormClick
+[20:24.33.423]  ShellExecuteS: ShellExecuteEx succeeded.
+[20:24.33.461]  BEGIN TFormXterm.Cts1ButtonCloseTabClick
+[20:24.33.461]      
+[20:24.33.461]      BEGIN CloseTab(1)
+[20:24.33.461]          CloseTab:  Tab is external app
+[20:24.33.461]          CloseTab:  Delete MobaScript file
+[20:24.33.461]          CloseTab:  Close TFormDetachedTab
+[20:24.33.461]          CloseTab: Cts1.BeginUpdate;
+[20:24.33.461]          CloseTab: Cts1.Tabs.Delete(1);
+[20:24.33.462]          Cts1ActiveTabChanged: New index = 0
+[20:24.33.462]          CloseTab: Cts1.Tabs.Delete(1);
+[20:24.33.462]          (SSH-Browser) TabSFTP[1].Free;
+[20:24.33.463]          Freeing object TMobaThread
+[20:24.33.463]          Freeing object TElSftpClient
+[20:24.33.463]          Freeing object TElSSHClient
+[20:24.33.463]          Freeing object TElSocket
+[20:24.33.463]          Freeing object TListView
+[20:24.33.468]          Freeing object TElSSHTunnelList
+[20:24.33.468]          Freeing object TElSubsystemSSHTunnel
+[20:24.33.469]          Freeing object TList
+[20:24.33.469]          Freeing object TTimer
+[20:24.33.469]          BEGIN DisplayCurrentTab
+[20:24.33.469]              DisplayCurrentTab: FormClick
+[20:24.33.469]              (SSH-Browser) DisplayCurrentTab(0): ActiverPanel14
+[20:24.33.469]              (SSH-Browser) BEGIN ActiverPanel14
+[20:24.33.469]              (SSH-Browser) BEGIN DesactiverPanel14
+[20:24.33.469]              (SSH-Browser) END DesactiverPanel14
+[20:24.33.469]              (SSH-Browser) END ActiverPanel14;
+[20:24.33.470]              DisplayCurrentTab: Cts1.BeginUpdate;
+[20:24.33.470]              DisplayCurrentTab: Cts1.EndUpdates
+[20:24.33.471]              DisplayCurrentTab: Show selected tab
+[20:24.33.475]              BEGIN ResizeTerminal
+[20:24.33.475]              END ResizeTerminal
+[20:24.33.475]              DisplayCurrentTab: Hide other tabs
+[20:24.33.475]              DisplayCurrentTab: Adapting buttons enable/disable states
+[20:24.33.475]              DisplayCurrentTab: DeterminerBoutonDetachOuReattach
+[20:24.33.476]              DisplayCurrentTab: DistribuerLeFocus
+[20:24.33.476]              BEGIN WMNewTab: 0
+[20:24.33.476]                  WMNewTab: FormClick
+[20:24.33.476]                  WMNewTab: LooseFocus
+[20:24.33.476]              END WMNewTab: 0
+[20:24.33.477]              BEGIN WMNewTab: 0
+[20:24.33.477]                  WMNewTab: FormClick
+[20:24.33.477]                  WMNewTab: LooseFocus
+[20:24.33.477]              END WMNewTab: 0
+[20:24.33.477]              BEGIN WMNewTab: 0
+[20:24.33.477]                  WMNewTab: FormClick
+[20:24.33.477]                  WMNewTab: LooseFocus
+[20:24.33.477]              END WMNewTab: 0
+[20:24.33.477]              BEGIN WMNewTab: 0
+[20:24.33.477]                  WMNewTab: FormClick
+[20:24.33.477]                  WMNewTab: LooseFocus
+[20:24.33.477]              END WMNewTab: 0
+[20:24.33.483]          END DisplayCurrentTab
+[20:24.33.484]      END CloseTab(1)
+[20:24.33.485]      
+[20:24.33.485]  END TFormXterm.Cts1ButtonCloseTabClick
+[20:24.33.527]  SetTitle(0, cs1.utdallas.edu);
+[20:24.33.530]  ShellExecuteS: WaitForInputIdle succeeded.
+[20:24.33.530]  END ShellExecuteS(C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin\motty.exe, -load "C:\Users\ASUS\AppData\Local\Temp\Mxt105\tmp\sessions\TERM17063203")
+[20:24.33.531]  
+[20:24.33.531]  FindWindow(CMoTTY)
+[20:24.33.531]  Potential window 787928 successfully passed 2nd verification.
+[20:24.33.531]  --> succeeded
+[20:24.33.533]  Moxt2.SetParent
+[20:24.33.545]  NEWTAB: Application.OnMessage:=AppMessage
+[20:24.33.556]  NEWTAB: Changing tab index C = 0
+[20:24.33.556]  NEWTAB: Launching DisplayCurrentTab...
+[20:24.33.556]  BEGIN DisplayCurrentTab
+[20:24.33.556]      DisplayCurrentTab: FormClick
+[20:24.33.556]      (SSH-Browser) DisplayCurrentTab(0): ActiverPanel14
+[20:24.33.556]      (SSH-Browser) BEGIN ActiverPanel14
+[20:24.33.556]      (SSH-Browser) BEGIN DesactiverPanel14
+[20:24.33.556]      (SSH-Browser) END DesactiverPanel14
+[20:24.33.556]      (SSH-Browser) END ActiverPanel14;
+[20:24.33.556]      DisplayCurrentTab: Cts1.BeginUpdate;
+[20:24.33.557]      DisplayCurrentTab: Cts1.EndUpdates
+[20:24.33.557]      DisplayCurrentTab: Show selected tab
+[20:24.33.648]      BEGIN ResizeTerminal
+[20:24.33.648]      END ResizeTerminal
+[20:24.33.648]      DisplayCurrentTab: Hide other tabs
+[20:24.33.648]      DisplayCurrentTab: Adapting buttons enable/disable states
+[20:24.33.648]      DisplayCurrentTab: DeterminerBoutonDetachOuReattach
+[20:24.33.648]      DisplayCurrentTab: DistribuerLeFocus
+[20:24.33.648]  END DisplayCurrentTab
+[20:24.33.648]  NEWTAB: NewTab_ReEnable_Timer1
+[20:24.33.648]  NEWTAB: MajVerticalTabs
+[20:24.33.648]  NEWTAB: Cts1.Resize;
+[20:24.33.652]  END NEWTAB(ssh "cs1.utdallas.edu" -l PleaseAskMe -p 22 -Y -o ForwardX11Trusted=yes -o ForwardX11=yes  -C -o Compression=yes  -Z , 109, 0)
+[20:24.33.652]  
+[20:24.33.652]  LaunchSession6
+[20:24.33.652]  ExecuteSelectedSession5
+[20:24.33.652]  END ExecuteSelectedSession
+[20:24.33.656]  END WaitForAllThreads
+[20:24.33.656]  
+[20:24.33.656]  LaunchTabContent(ssh "cs1.utdallas.edu" -l PleaseAskMe -p 22 -Y -o ForwardX11Trusted=yes -o ForwardX11=yes  -C -o Compression=yes  -Z , cs1.utdallas.edu);
+[20:24.33.656]  
+[20:24.33.656]  SetEnvironmentVariable(LOCALE, en_US.UTF-8)
+[20:24.33.656]  SetEnvironmentVariable(PATH, C:\Users\ASUS\AppData\Local\Temp\Mxt105\bin;C:\WINDOWS\;C:\WINDOWS\system32\)
+[20:24.33.656]  Enabling MOBANOACL
+[20:24.33.656]  
+[20:24.33.656]  ShellExecute: motty.exe
+[20:24.33.657]  
+[20:24.33.657]  NEWTAB: Cts1.Resize;
+[20:24.33.660]  END NEWTAB(ssh "cs1.utdallas.edu" -l PleaseAskMe -p 22 -Y -o ForwardX11Trusted=yes -o ForwardX11=yes  -C -o Compression=yes  -Z , 109, 0)
+[20:24.33.660]  
+[20:24.33.660]  END ExecuteSelectedSession
+[20:24.33.660]  !!!! EXCEPTION EListError:  List index out of bounds (1)

@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1516635862 source:d:\codeblocks\cs3377\myprog1.cpp
+	<direct.h>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<unistd.h>
+

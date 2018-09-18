@@ -1,0 +1,20 @@
+#!/bin/bash
+function maxfilename {
+typeset -i max this
+if [ ! -d "$1" -o $# = 0 ]
+	then
+	echo "ERROR: not a directory name"
+	return 1
+fi
+max=0
+for filename in $(/bin/ls $1)
+	do
+	this=${#filename}
+	if [ $this -gt $max ]
+		then
+		max=$this
+	fi
+	done
+echo "Maximum of the lengths of all filenames is $max"
+}
+maxfilename $1

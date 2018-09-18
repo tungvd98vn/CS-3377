@@ -1,0 +1,537 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fmodern Courier New;}{\f1\fmodern\fcharset204{\*\fname Courier New;}Courier New CYR;}{\f2\fmodern\fcharset0 Courier New;}{\f3\fmodern\fcharset238{\*\fname Courier New;}Courier New CE;}{\f4\fnil\fcharset129 Tahoma;}}
+{\colortbl ;\red0\green0\blue0;\red64\green127\blue64;}
+\viewkind4\uc1\pard\f0\fs18\{cslinux1:~/w6\} clear\cf1\highlight1 
+\par \cf0\highlight0\{cslinux1:~/w6\} ls\cf1\highlight1 
+\par \cf2\highlight0 lscat1\cf0   lscat1.c  \cf2 simple-cat\cf0   simple-cat.c  \cf2 simple-ls\cf0   simple-ls.c\cf1\highlight1 
+\par \cf0\highlight0\{cslinux1:~/w6\} cat simple-cat.c\cf1\highlight1 
+\par \cf0\highlight0 /*\cf1\highlight1 
+\par \cf0\highlight0  * Stripped down version of 'cat', using unbuffered I/O.\cf1\highlight1 
+\par \cf0\highlight0  * ./simple-cat < simple-cat.c\cf1\highlight1 
+\par \cf0\highlight0  */\cf1\highlight1 
+\par 
+\par \cf0\highlight0 #include <stdio.h>\cf1\highlight1 
+\par \cf0\highlight0 #include <stdlib.h>\cf1\highlight1 
+\par \cf0\highlight0 #include <unistd.h>\cf1\highlight1 
+\par 
+\par \cf0\highlight0 #define BUFFSIZE 32768\cf1\highlight1 
+\par 
+\par \cf0\highlight0 int\cf1\highlight1 
+\par \cf0\highlight0 main(int argc, char **argv) \{\cf1\highlight1 
+\par \cf0\highlight0         int n;\cf1\highlight1 
+\par \cf0\highlight0         char buf[BUFFSIZE];\cf1\highlight1 
+\par 
+\par \cf0\highlight0         while ((n = read(STDIN_FILENO, buf, BUFFSIZE)) > 0) \{\cf1\highlight1 
+\par \cf0\highlight0                 if (write(STDOUT_FILENO, buf, n) != n) \{\cf1\highlight1 
+\par \cf0\highlight0                         fprintf(stderr, "write error\\n");\cf1\highlight1 
+\par \cf0\highlight0                         exit(1);\cf1\highlight1 
+\par \cf0\highlight0                 \}\cf1\highlight1 
+\par \cf0\highlight0         \}\cf1\highlight1 
+\par 
+\par \cf0\highlight0         if (n < 0) \{\cf1\highlight1 
+\par \cf0\highlight0                 fprintf(stderr, "read error\\n");\cf1\highlight1 
+\par \cf0\highlight0                 exit(1);\cf1\highlight1 
+\par \cf0\highlight0         \}\cf1\highlight1 
+\par 
+\par \cf0\highlight0         return(0);\cf1\highlight1 
+\par \cf0\highlight0\}\{cslinux1:~/w6\} cat simple-ls.c\cf1\highlight1 
+\par \cf0\highlight0 /*\cf1\highlight1 
+\par \cf0\highlight0  * simple-ls.c\cf1\highlight1 
+\par \cf0\highlight0  * Extremely low-power ls clone.\cf1\highlight1 
+\par \cf0\highlight0  * ./simple-ls .\cf1\highlight1 
+\par \cf0\highlight0  */\cf1\highlight1 
+\par 
+\par \cf0\highlight0 #include <sys/types.h>\cf1\highlight1 
+\par 
+\par \cf0\highlight0 #include <dirent.h>\cf1\highlight1 
+\par \cf0\highlight0 #include <stdio.h>\cf1\highlight1 
+\par \cf0\highlight0 #include <stdlib.h>\cf1\highlight1 
+\par 
+\par \cf0\highlight0 int\cf1\highlight1 
+\par \cf0\highlight0 main(int argc, char **argv) \{\cf1\highlight1 
+\par 
+\par \cf0\highlight0         DIR *dp;\cf1\highlight1 
+\par \cf0\highlight0         struct dirent *dirp;\cf1\highlight1 
+\par 
+\par \cf0\highlight0         if (argc != 2) \{\cf1\highlight1 
+\par \cf0\highlight0                 fprintf(stderr, "usage: %s dir_name\\n", argv[0]);\cf1\highlight1 
+\par \cf0\highlight0                 exit(1);\cf1\highlight1 
+\par \cf0\highlight0         \}\cf1\highlight1 
+\par 
+\par \cf0\highlight0         if ((dp = opendir(argv[1])) == NULL ) \{\cf1\highlight1 
+\par \cf0\highlight0                 fprintf(stderr, "can't open '%s'\\n", argv[1]);\cf1\highlight1 
+\par \cf0\highlight0                 exit(1);\cf1\highlight1 
+\par \cf0\highlight0         \}\cf1\highlight1 
+\par 
+\par \cf0\highlight0         while ((dirp = readdir(dp)) != NULL )\cf1\highlight1 
+\par \cf0\highlight0                 printf("%s\\n", dirp->d_name);\cf1\highlight1 
+\par 
+\par \cf0\highlight0         closedir(dp);\cf1\highlight1 
+\par \cf0\highlight0         return(0);\cf1\highlight1 
+\par \cf0\highlight0\}\{cslinux1:~/w6\} gcc simple-ls.c -o simple-ls\cf1\highlight1 
+\par \cf0\highlight0\{cslinux1:~/w6\} ./simple-ls ./\cf1\highlight1 
+\par \cf0\highlight0 .\cf1\highlight1 
+\par \cf0\highlight0 ..\cf1\highlight1 
+\par \cf0\highlight0 lscat1\cf1\highlight1 
+\par \cf0\highlight0 lscat1.c\cf1\highlight1 
+\par \cf0\highlight0 simple-cat\cf1\highlight1 
+\par \cf0\highlight0 simple-cat.c\cf1\highlight1 
+\par \cf0\highlight0 simple-ls.c\cf1\highlight1 
+\par \cf0\highlight0 simple-ls\cf1\highlight1 
+\par \cf0\highlight0\{cslinux1:~/w6\} gcc simple-cat.c -o simple-cat\cf1\highlight1 
+\par \cf0\highlight0\{cslinux1:~/w6\} ./siple-cat simple-cat.c\cf1\highlight1 
+\par \cf0\highlight0 -bash: ./siple-cat: No such file or directory\cf1\highlight1 
+\par \cf0\highlight0\{cslinux1:~/w6\} ./simple-cat simple-cat.c\cf1\highlight1 
+\par 
+\par 
+\par \cf0\highlight0 w\cf1\highlight1 
+\par \cf0\highlight0 w\cf1\highlight1 
+\par 
+\par 
+\par \cf0\highlight0 w\cf1\highlight1 
+\par \cf0\highlight0 w\cf1\highlight1 
+\par \cf0\highlight0 ^Z\cf1\highlight1 
+\par \cf0\highlight0 [2]+  Stopped                 ./simple-cat simple-cat.c\cf1\highlight1 
+\par \cf0\highlight0\{cslinux1:~/w6\} ./simple-cat <  simple-cat.c\cf1\highlight1 
+\par \cf0\highlight0 /*\cf1\highlight1 
+\par \cf0\highlight0  * Stripped down version of 'cat', using unbuffered I/O.\cf1\highlight1 
+\par \cf0\highlight0  * ./simple-cat < simple-cat.c\cf1\highlight1 
+\par \cf0\highlight0  */\cf1\highlight1 
+\par 
+\par \cf0\highlight0 #include <stdio.h>\cf1\highlight1 
+\par \cf0\highlight0 #include <stdlib.h>\cf1\highlight1 
+\par \cf0\highlight0 #include <unistd.h>\cf1\highlight1 
+\par 
+\par \cf0\highlight0 #define BUFFSIZE 32768\cf1\highlight1 
+\par 
+\par \cf0\highlight0 int\cf1\highlight1 
+\par \cf0\highlight0 main(int argc, char **argv) \{\cf1\highlight1 
+\par \cf0\highlight0         int n;\cf1\highlight1 
+\par \cf0\highlight0         char buf[BUFFSIZE];\cf1\highlight1 
+\par 
+\par \cf0\highlight0         while ((n = read(STDIN_FILENO, buf, BUFFSIZE)) > 0) \{\cf1\highlight1 
+\par \cf0\highlight0                 if (write(STDOUT_FILENO, buf, n) != n) \{\cf1\highlight1 
+\par \cf0\highlight0                         fprintf(stderr, "write error\\n");\cf1\highlight1 
+\par \cf0\highlight0                         exit(1);\cf1\highlight1 
+\par \cf0\highlight0                 \}\cf1\highlight1 
+\par \cf0\highlight0         \}\cf1\highlight1 
+\par 
+\par \cf0\highlight0         if (n < 0) \{\cf1\highlight1 
+\par \cf0\highlight0                 fprintf(stderr, "read error\\n");\cf1\highlight1 
+\par \cf0\highlight0                 exit(1);\cf1\highlight1 
+\par \cf0\highlight0         \}\cf1\highlight1 
+\par 
+\par \cf0\highlight0         return(0);\cf1\highlight1 
+\par \cf0\highlight0\}\{cslinux1:~/w6\} ls\cf1\highlight1 
+\par \cf2\highlight0 lscat1\cf0   lscat1.c  \cf2 simple-cat\cf0   simple-cat.c  \cf2 simple-ls\cf0   simple-ls.c\cf1\highlight1 
+\par \cf0\highlight0\{cslinux1:~/w6\} cat lscat1\cf1\highlight1 
+\par \cf0\highlight0  ``\u9618?\u9618? ((`(`\u9618?TT@T@DDP\u9618?tdH@8@@@t\cf1\highlight1 
+\par \cf0\highlight0 H\cf1\highlight1 
+\par \cf0\highlight0 @H\cf1\highlight1 
+\par \cf0\highlight0 @44Q\u9618?tdR\u9618?td``\u9618?\u9618?/lib64/ld-linux-x86-64.so.2GNU GNUC\cf1\highlight1 
+\par \cf0\highlight0                                                   \u9618?\u9618?\u9618?\u9618?\u9618?\u9618?PH//\cf1\highlight1\f1\u1158?\cf0\highlight0\f0 <\u9618?)\u9618?9\u9618?\cf1\highlight1 
+\par \cf0\highlight0                                                                   .eHO3l:%sk\u9618? ^A\u9618?W\u9618?libc.so.6strcpyexitreaddirfopenclosedirputsstrlenmemsetstdoutfcloseopendirstderrfwritefreadfprintf__libc_start_main__gmon_start__GLIBC_2.2.5ui \u9618?\u9618?`\cf1\highlight1 
+\par \cf0\highlight0\u9618?`\u9618?`` `(`0`8`@`H`PX`    ``\cf1\highlight1 
+\par \cf0\highlight0 h`\cf1\highlight1 
+\par \cf0\highlight0   p`\cf1\highlight1 
+\par \cf0\highlight0\u9618?`\u9618?`\u9618?`H\u9618?H\u9618? H\u9618?\u9618?t\u9618?\u9618?H\u9618?\u9618?\u9618?5 \u9618?% @\u9618?% h\u9618?\u9618?\u9618?\u9618?\u9618?\u9618?% h\u9618?\u9618?\u9618?\u9618?\u9618?\u9618?% h\u9618?\u9618?\u9618?\u9618?\u9618?\u9618?% h\u9618?\u9618?\u9618?\u9618?\u9618?% h\u9618?\u9618?\u9618?\u9618?\u9618?% h\u9618?\u9618?\u9618?\u9618?\u9618?% h\u9618?\u9618?\u9618?\u9618?\u9618?% h\u9618?p\u9618?\u9618?\u9618?\u9618?% \u9618?`\u9618?\u9618?\u9618?\u9618?% h  \u9618?P\u9618?\u9618?\u9618?\u9618?% h\cf1\highlight1 
+\par \cf0\highlight0\u9618?@\u9618?\u9618?\u9618?\u9618?% h\cf1\highlight1 
+\par \cf0\highlight0          \u9618?0\u9618?\u9618?\u9618?\u9618?% h\cf1\highlight1 
+\par \cf0\highlight0\u9618?\u9618?\u9618?\u9618?\u9618?% h\u9618?\u9618?\u9618?\u9618?\u9618?% h\u9618?\u9618?\u9618?\u9618?\u9618?1\u9618?I\u9618?\u9618?^H\u9618?\u9618?H\u9618?\u9618?\u9618?PTI\u9618?\u9618?\u9618?\cf1\highlight1 
+\par \cf0\highlight0                                         @H\u9618?\u9618?p\cf1\highlight1 
+\par \cf0\highlight0                                              @H\u9618?\u9618?]      @\u9618?g\u9618?\u9618?\u9618?\u9618?fD\u9618?\u9618?`UH-\u9618?`H\u9618?\u9618?H\u9618?\u9618?\f2 w]\'f8H\f0\u9618?\u9618?t\u9618?]\u9618?\u9618?`\u9618?\u9618?\u9618?\u9618?\u9618?`UH-\u9618?`H\u9618?\u9618?H\u9618?\u9618?H\u9618?\u9618?H\u9618?\u9618??H\u9618?H\u9618?\u9618?\f2 u]\'faH\f0\u9618?\u9618?t\u9618?]H\u9618?\f3\u447?\f0\u9618?`\u9618?\u9618?\u9618?\u9618?=\u9618? uUH\u9618?\u9618?\u9618?~\u9618?\u9618?\u9618?]\u9618?\u9618? \u9618?\u9618?@H\u9618?=\u9618? t\u9618?H\u9618?\u9618?tU\u9618? `H\u9618?\u9618?\u9618?\u9618?]\u9618?\{\u9618?\u9618?\u9618?\u9618?s\u9618?\u9618?\u9618?UH\u9618?\u9618?H\u9618?\u9618?\u9618?\u9618?|\u9618?\u9618?\u9618?H\u9618?\u9618?p\u9618?\u9618?\u9618?\u9618?\u9618?|\u9618?\u9618?\u9618?t-H\u9618?\u9618?p\u9618?\u9618?\u9618?H\u9618?H\u9618? \u9618?\cf1\highlight1 
+\par \cf0\highlight0 @H\u9618?\f3\u504?\f0\u9618?o\u9618?\u9618?\u9618?\u9618?\u9618?\u9618?\u9618?\u9618?H\u9618?\u9618?p\u9618?\u9618?\u9618?H\u9618?H\u9618?H\u9618?\u9618?\u9618?\u9618?\u9618?\u9618?\u9618?H\u9618?E\u9618?H\u9618?\}\u9618?u1H\u9618?\u9618?p\u9618?\u9618?\u9618?H\u9618?H\u9618?H\u9618?\u9618? \u9618?\cf1\highlight1 
+\par \cf0\highlight0 @H\u9618?\f3\u504?\f0\u9618?\u9618?\u9618?\u9618?\u9618?\u9618?S\u9618?\u9618?\u9618?\u9618?6H\u9618?E\u9618?H\u9618?\u9618?H\u9618?\u9618?\u9618?n\u9618?\u9618?\u9618?H\u9618?E\u9618?\u9618?P\u9618?H\u9618?\u9618?\u9618?\u9618?\u9618?\u9618?H\u9618?E\u9618?H\u9618?PH\u9618?E\u9618?H\u9618?\u9618?H\u9618?\u9618?\u9618?1\u9618?\u9618?\u9618?H\u9618?E\u9618?H\u9618?\f3\u447?\f0 %\cf1\highlight1 
+\par \cf0\highlight0 @\u9618?\u9618?\{\u9618?\u9618?\u9618?H\u9618?E\u9618?H\u9618?\u9618?\u9618?_\u9618?\u9618?\u9618?\u9618?E\u9618?E\u9618?\f3\u447?\f0 -\cf1\highlight1 
+\par \cf0\highlight0 @\u9618?\u9618?X\u9618?\u9618?\u9618?\u9618?E\u9618?\u9618?H\u9618?U\u9618?H\u9618?H\u9618?\u9618?\u9618??\cf1\highlight1 
+\par \cf0\highlight0 @\u9618?8\u9618?u$\u9618?E\u9618?\u9618?H\u9618?U\u9618?H\u9618?H\u9618?\u9618?\u9618?A\cf1\highlight1 
+\par \cf0\highlight0 @\u9618?8\u9618?u\u9618?E\u9618?\u9618?\u9618?E\u9618?\u9618?\}\u9618?ttH\u9618?E\u9618?\u9618?C\cf1\highlight1 
+\par \cf0\highlight0\u9618? H\u9618?U\u9618?H\u9618?\u9618?\u9618?\u9618?\u9618?\u9618?\u9618?H\u9618?\u9618?\u9618?_\u9618?\u9618?\u9618?H\u9618?U\u9618?H\u9618?\u9618?\u9618?\u9618?\u9618?\u9618?H\u9618?\f1\u1146?\f0\u9618?H\u9618?\u9618?\u9618?o\u9618?\u9618?\u9618?H\u9618?E\u9618?H\u9618?\}\u9618?u\u9618?H\u9618?E\u9618?H\u9618?\u9618?\u9618?h\u9618?\u9618?\u9618?H\u9618?E\u9618?H\u9618?\u9618?\u9618?\u9618?\u9618?\u9618?\u9618?H\u9618?E\u9618?H\u9618?\}\u9618?\u9618?\u9618?\u9618?\u9618?\u9618?H\u9618?E\u9618?H\u9618?\u9618?\u9618?\u9618?\u9618?\u9618?\u9618?\u9618?\u9618?f.\u9618?AWA\u9618?\u9618?AVI\u9618?\u9618?AUI\u9618?\u9618?ATL\u9618?%\u9618? UH\u9618?-\u9618? SL)\u9618?1\u9618?H\u9618?\u9618?H\u9618?\u9618?\u9618?\u9618?\u9618?H\u9618?\u9618?t\u9618?L\u9618?\u9618?L\u9618?\u9618?D\u9618?\u9618?A\u9618?\u9618?H\u9618?\u9618?H9\u9618?u\u9618?H\u9618?\f2 []A\\A]A^A_\'d0f.\f0\u9618?\u9618?\u9618?H\u9618?H\u9618?\u9618?usage: %s dir_name\cf1\highlight1 
+\par \cf0\highlight0 can't open '%s'\cf1\highlight1 
+\par \cf0\highlight0  ** %s  name_length=%d\cf1\highlight1 
+\par \cf0\highlight0 c.r4\u9618?\u9618?\u9618?\u9618?(\u9618?\u9618?\u9618?P\u9618?\u9618?\u9618?\u9618?(\u9618?\u9618?\u9618?\u9618?\u9618?\u9618?\u9618?\u9618?zRx\cf1\highlight1 
+\par \cf0\highlight0\u9618?\u9618?\u9618?\u9618?*zRx\cf1\highlight1 
+\par \cf0\highlight0 $\u9618?\u9618?\u9618?\u9618?FJ\cf1\highlight1 
+\par \cf0\highlight0        \u9618??;*3$"De\u9618?\u9618?\u9618?     A\u9618?C\cf1\highlight1 
+\par \cf0\highlight0 DdX\u9618?\u9618?\u9618?eB\u9618?E\u9618?E \u9618?E(\u9618?H0\u9618?H8\u9618?M@l8A0A(B BB\u9618?\u9618?\u9618?\u9618?\u9618?0       @       @\cf1\highlight1 
+\par \cf0\highlight0\u9618?@\cf1\highlight1 
+\par \cf0\highlight0  \u9618?\u9618?\u9618?o\u9618?@\u9618?@\u9618?@\cf1\highlight1 
+\par \cf0\highlight0\u9618?\cf1\highlight1 
+\par \cf0\highlight0  `\u9618?\u9618?@pH \u9618?\u9618?\u9618?oP@\u9618?\u9618?\u9618?o\u9618?\u9618?\u9618?o(@(`v@\u9618?@\u9618?@\u9618?@\u9618?@\u9618?@\u9618?@\u9618?@\u9618?@@@@@@GCC: (GNU) 4.8.5 20150623 (Red Hat 4.8.5-16).symtab.strtab.shstrtab.interp.note.ABI-tag.note.gnu.build-id.gnu.hash.dynsym.dynstr.gnu.version.gnu.version_r.rela.dyn.rela.plt.init.text.fini.rodata.eh_frame_hdr.eh_frame.init_array.fini_array.jcr.dynamic.got.got.plt.data.bss.comment8@T@t@\u9618?@\u9618?@\u9618?@(P@     p@\cf1\highlight1 
+\par \cf0\highlight0\u9618?@\cf1\highlight1 
+\par \cf0\highlight0   8@\cf1\highlight1 
+\par \cf0\highlight0 @\u9618?\cf1\highlight1 
+\par \cf0\highlight0   @\u9618?\cf1\highlight1 
+\par \cf0\highlight0     @H\cf1\highlight1 
+\par \cf0\highlight0 @\u9618?\cf1\highlight1 
+\par \cf0\highlight0 @`` `(`\u9618?``\u9618?`\u9618?`\u9618?\u9618?\cf1\highlight1 
+\par \cf0\highlight0\u9618?\u9618? `\u9618?\u9618?\u9618?`\u9618?(`\u9618?`\u9618?\u9618?\u9618?\u9618?p\cf1\highlight1 
+\par \cf0\highlight0  @. J\u9618?^ \u9618?`i\}\u9618?\u9618?\u9618?`\u9618?\u9618?\u9618?\u9618?\cf1\highlight1 
+\par \cf0\highlight0                     @\u9618?\u9618?*I\u9618?`Vk z\u9618?\cf1\highlight1 
+\par \cf0\highlight0                                 @\u9618?\u9618?\cf1\highlight1 
+\par \cf0\highlight0 p                                  @\u9618?\u9618?\cf1\highlight1 
+\par \cf0\highlight0 ]\u9618?\u9618?`\u9618?`\u9618? @       \u9618?\u9618? \u9618?%\u9618?`1 K\cf1\highlight1 
+\par \cf0\highlight0                           8@Q\u9618?crtstuff.c__JCR_LIST__deregister_tm_clonesregister_tm_clones__do_global_dtors_auxcompleted.6345__do_global_dtors_aux_fini_array_entryframe_dummy__frame_dummy_init_array_entrylscat1.c__FRAME_END____JCR_END____init_array_end_DYNAMIC__init_array_start_GLOBAL_OFFSET_TABLE___libc_csu_fini_ITM_deregisterTMCloneTablestdout@@GLIBC_2.2.5data_startstrcpy@@GLIBC_2.2.5puts@@GLIBC_2.2.5fread@@GLIBC_2.2.5_edatafclose@@GLIBC_2.2.5opendir@@GLIBC_2.2.5_finistrlen@@GLIBC_2.2.5printf@@GLIBC_2.2.5memset@@GLIBC_2.2.5closedir@@GLIBC_2.2.5__libc_start_main@@GLIBC_2.2.5__data_startfprintf@@GLIBC_2.2.5__gmon_start____dso_handle_IO_stdin_usedreaddir@@GLIBC_2.2.5__libc_csu_init_end_start__bss_startmainfopen@@GLIBC_2.2.5_Jv_RegisterClassesexit@@GLIBC_2.2.5fwrite@@GLIBC_2.2.5__TMC_END___ITM_registerTMCloneTable_initstderr@@GLIBC_2.2.5\cf1\highlight1 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par \cf0\highlight0 @8#T@T 1t@t$D\u9618?\u9618?\u9618?o\u9618?@\u9618?N\cf1\highlight1 
+\par \cf0\highlight0                      \u9618?@\u9618?V\u9618?@\u9618?\u9618?^\u9618?\u9618?\u9618?o(@(&k\u9618?\u9618?\u9618?oP@Pzp@p\u9618?B\u9618?@\u9618?\u9618?\cf1\highlight1 
+\par \cf0\highlight0\u9618?8@8\u9618?`@`\u9618?@r\u9618?\u9618?\cf1\highlight1 
+\par \cf0\highlight0              @\u9618?\cf1\highlight1 
+\par \cf0\highlight0                 \u9618?\u9618?\cf1\highlight1 
+\par \cf0\highlight0                   @\u9618?\cf1\highlight1 
+\par \cf0\highlight0                     \u9618?H\cf1\highlight1 
+\par \cf0\highlight0 @H\cf1\highlight1 
+\par \cf0\highlight0 4\u9618?\u9618?\cf1\highlight1 
+\par \cf0\highlight0 @\u9618?\cf1\highlight1 
+\par \cf0\highlight0\u9618? \u9618?(`(\u9618?\u9618?\u9618?\u9618?`\u9618?\u9618?`\u9618?\u9618?0\u9618?-\u9618?\u9618?-  Xe\{cslinux1:~/w6\} xtermxtermxtermxtermxtermxtermxtermxtermxtemxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxterm1\cf1\highlight1 
+\par \cf0\highlight0 bash: xtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxtermxterm1: command not found...\cf1\highlight1 
+\par \cf0\highlight0\{cslinux1:~/w6\} cat lscat1.c\cf1\highlight1 
+\par \cf0\highlight0 #include <sys/types.h>\cf1\highlight1 
+\par \cf0\highlight0 #include <dirent.h>\cf1\highlight1 
+\par \cf0\highlight0 #include <stdio.h>\cf1\highlight1 
+\par \cf0\highlight0 #include <stdlib.h>\cf1\highlight1 
+\par \cf0\highlight0 #include <string.h>\cf1\highlight1 
+\par \cf0\highlight0 #include <stdbool.h>\cf1\highlight1 
+\par 
+\par \cf0\highlight0 #define CHUNK 1024 /* read 1024 bytes at a time */\cf1\highlight1 
+\par 
+\par 
+\par \cf0\highlight0 int main(int argc, char **argv) \{\cf1\highlight1 
+\par \cf0\highlight0         char filename[80];\cf1\highlight1 
+\par \cf0\highlight0         int  name_length;\cf1\highlight1 
+\par \cf0\highlight0         DIR *dp;\cf1\highlight1 
+\par \cf0\highlight0         struct dirent *dirp;\cf1\highlight1 
+\par \cf0\highlight0         bool cFile;\cf1\highlight1 
+\par 
+\par \cf0\highlight0         if (argc != 2)\cf1\highlight1 
+\par \cf0\highlight0         \{\cf1\highlight1 
+\par \cf0\highlight0                 fprintf(stderr, "usage: %s dir_name\\n", argv[0]);\cf1\highlight1 
+\par \cf0\highlight0                 exit(1);\cf1\highlight1 
+\par \cf0\highlight0         \}\cf1\highlight1 
+\par 
+\par \cf0\highlight0         if ((dp = opendir(argv[1])) == NULL )\cf1\highlight1 
+\par \cf0\highlight0         \{\cf1\highlight1 
+\par \cf0\highlight0                 fprintf(stderr, "can't open '%s'\\n", argv[1]);\cf1\highlight1 
+\par \cf0\highlight0                 exit(1);\cf1\highlight1 
+\par \cf0\highlight0         \}\cf1\highlight1 
+\par 
+\par \cf0\highlight0         while ((dirp = readdir(dp)) != NULL )\cf1\highlight1 
+\par \cf0\highlight0         \{\cf1\highlight1 
+\par \cf0\highlight0                 printf("%s\\n", dirp->d_name);\cf1\highlight1 
+\par 
+\par \cf0\highlight0                 memset(filename, '\\0', sizeof(filename));\cf1\highlight1 
+\par \cf0\highlight0                 strcpy(filename, dirp->d_name);\cf1\highlight1 
+\par \cf0\highlight0                 printf(" ** %s ", filename);\cf1\highlight1 
+\par \cf0\highlight0                 name_length = strlen(filename);\cf1\highlight1 
+\par \cf0\highlight0                 printf(" name_length=%d \\n", name_length);\cf1\highlight1 
+\par 
+\par \cf0\highlight0                 if (strncmp(&filename[name_length - 1], "c", 1) == 0 && strncmp(&filename[name_length - 2], ".", 1) == 0)\{\cf1\highlight1 
+\par \cf0\highlight0                 cFile = true;\cf1\highlight1 
+\par \cf0\highlight0                  \}\cf1\highlight1 
+\par \cf0\highlight0                 else  cFile = false;\cf1\highlight1 
+\par 
+\par 
+\par \cf0\highlight0                 // if c file\cf1\highlight1 
+\par \cf0\highlight0                 if (cFile)\cf1\highlight1 
+\par \cf0\highlight0                 \{\cf1\highlight1 
+\par \cf0\highlight0                         // then print the file content\cf1\highlight1 
+\par \cf0\highlight0                         char buf[CHUNK];\cf1\highlight1 
+\par \cf0\highlight0                         FILE *file;\cf1\highlight1 
+\par \cf0\highlight0                         size_t nread;\cf1\highlight1 
+\par 
+\par \cf0\highlight0                         file = fopen(filename, "r");\cf1\highlight1 
+\par \cf0\highlight0                         if (file) \{\cf1\highlight1 
+\par \cf0\highlight0                                 while ((nread = fread(buf, 1, sizeof buf, file)) > 0)\cf1\highlight1 
+\par \cf0\highlight0                                         fwrite(buf, 1, nread, stdout);\cf1\highlight1 
+\par \cf0\highlight0                                 fclose(file);\cf1\highlight1 
+\par \cf0\highlight0                         \}\cf1\highlight1 
+\par \cf0\highlight0                 \}\cf1\highlight1 
+\par 
+\par \cf0\highlight0         \}\cf1\highlight1 
+\par 
+\par \cf0\highlight0         closedir(dp);\cf1\highlight1 
+\par \cf0\highlight0         return(0);\cf1\highlight1 
+\par \cf0\highlight0\}\cf1\highlight1 
+\par \cf0\highlight0\{cslinux1:~/w6\} ./lscat1 $HOME\cf1\highlight1 
+\par \cf0\highlight0 .\cf1\highlight1 
+\par \cf0\highlight0  ** .  name_length=1\cf1\highlight1 
+\par \cf0\highlight0 ..\cf1\highlight1 
+\par \cf0\highlight0  ** ..  name_length=2\cf1\highlight1 
+\par \cf0\highlight0 .cshrc\cf1\highlight1 
+\par \cf0\highlight0  ** .cshrc  name_length=6\cf1\highlight1 
+\par \cf0\highlight0 .Xdefaults\cf1\highlight1 
+\par \cf0\highlight0  ** .Xdefaults  name_length=10\cf1\highlight1 
+\par \cf0\highlight0 w7\cf1\highlight1 
+\par \cf0\highlight0  ** w7  name_length=2\cf1\highlight1 
+\par \cf0\highlight0 cs33771\cf1\highlight1 
+\par \cf0\highlight0  ** cs33771  name_length=7\cf1\highlight1 
+\par \cf0\highlight0 hello.c\cf1\highlight1 
+\par \cf0\highlight0  ** hello.c  name_length=7\cf1\highlight1 
+\par \cf0\highlight0 .Xauthority\cf1\highlight1 
+\par \cf0\highlight0  ** .Xauthority  name_length=11\cf1\highlight1 
+\par \cf0\highlight0 part2\cf1\highlight1 
+\par \cf0\highlight0  ** part2  name_length=5\cf1\highlight1 
+\par \cf0\highlight0 .forward\cf1\highlight1 
+\par \cf0\highlight0  ** .forward  name_length=8\cf1\highlight1 
+\par \cf0\highlight0 .twmrc\cf1\highlight1 
+\par \cf0\highlight0  ** .twmrc  name_length=6\cf1\highlight1 
+\par \cf0\highlight0 .ssh\cf1\highlight1 
+\par \cf0\highlight0  ** .ssh  name_length=4\cf1\highlight1 
+\par \cf0\highlight0 .bash_history\cf1\highlight1 
+\par \cf0\highlight0  ** .bash_history  name_length=13\cf1\highlight1 
+\par \cf0\highlight0 .exrc\cf1\highlight1 
+\par \cf0\highlight0  ** .exrc  name_length=5\cf1\highlight1 
+\par \cf0\highlight0 w4a2\cf1\highlight1 
+\par \cf0\highlight0  ** w4a2  name_length=4\cf1\highlight1 
+\par \cf0\highlight0 .project\cf1\highlight1 
+\par \cf0\highlight0  ** .project  name_length=8\cf1\highlight1 
+\par \cf0\highlight0 .defaults\cf1\highlight1 
+\par \cf0\highlight0  ** .defaults  name_length=9\cf1\highlight1 
+\par \cf0\highlight0 .cache\cf1\highlight1 
+\par \cf0\highlight0  ** .cache  name_length=6\cf1\highlight1 
+\par \cf0\highlight0 hello\cf1\highlight1 
+\par \cf0\highlight0  ** hello  name_length=5\cf1\highlight1 
+\par \cf0\highlight0 .login.sunview\cf1\highlight1 
+\par \cf0\highlight0  ** .login.sunview  name_length=14\cf1\highlight1 
+\par \cf0\highlight0 .setow\cf1\highlight1 
+\par \cf0\highlight0  ** .setow  name_length=6\cf1\highlight1 
+\par \cf0\highlight0 .emacs.d\cf1\highlight1 
+\par \cf0\highlight0  ** .emacs.d  name_length=8\cf1\highlight1 
+\par \cf0\highlight0 .path\cf1\highlight1 
+\par \cf0\highlight0  ** .path  name_length=5\cf1\highlight1 
+\par \cf0\highlight0 .Xdefaults.maker\cf1\highlight1 
+\par \cf0\highlight0  ** .Xdefaults.maker  name_length=16\cf1\highlight1 
+\par \cf0\highlight0 entry-file\cf1\highlight1 
+\par \cf0\highlight0  ** entry-file  name_length=10\cf1\highlight1 
+\par \cf0\highlight0 .elmrc\cf1\highlight1 
+\par \cf0\highlight0  ** .elmrc  name_length=6\cf1\highlight1 
+\par \cf0\highlight0 perl5\cf1\highlight1 
+\par \cf0\highlight0  ** perl5  name_length=5\cf1\highlight1 
+\par \cf0\highlight0 workspace\cf1\highlight1 
+\par \cf0\highlight0  ** workspace  name_length=9\cf1\highlight1 
+\par \cf0\highlight0 Mail\cf1\highlight1 
+\par \cf0\highlight0  ** Mail  name_length=4\cf1\highlight1 
+\par \cf0\highlight0 .config\cf1\highlight1 
+\par \cf0\highlight0  ** .config  name_length=7\cf1\highlight1 
+\par \cf0\highlight0 .mailrc\cf1\highlight1 
+\par \cf0\highlight0  ** .mailrc  name_length=7\cf1\highlight1 
+\par \cf0\highlight0 .logout\cf1\highlight1 
+\par \cf0\highlight0  ** .logout  name_length=7\cf1\highlight1 
+\par \cf0\highlight0 a2\cf1\highlight1 
+\par \cf0\highlight0  ** a2  name_length=2\cf1\highlight1 
+\par \cf0\highlight0 tunvu\cf1\highlight1 
+\par \cf0\highlight0  ** tunvu  name_length=5\cf1\highlight1 
+\par \cf0\highlight0 cs33777\cf1\highlight1 
+\par \cf0\highlight0  ** cs33777  name_length=7\cf1\highlight1 
+\par \cf0\highlight0 w4a3\cf1\highlight1 
+\par \cf0\highlight0  ** w4a3  name_length=4\cf1\highlight1 
+\par \cf0\highlight0 .bashrc\cf1\highlight1 
+\par \cf0\highlight0  ** .bashrc  name_length=7\cf1\highlight1 
+\par \cf0\highlight0 .xserverrc\cf1\highlight1 
+\par \cf0\highlight0  ** .xserverrc  name_length=10\cf1\highlight1 
+\par \cf0\highlight0 apue.3e\cf1\highlight1 
+\par \cf0\highlight0  ** apue.3e  name_length=7\cf1\highlight1 
+\par \cf0\highlight0 .bash_profile\cf1\highlight1 
+\par \cf0\highlight0  ** .bash_profile  name_length=13\cf1\highlight1 
+\par \cf0\highlight0 .login\cf1\highlight1 
+\par \cf0\highlight0  ** .login  name_length=6\cf1\highlight1 
+\par \cf0\highlight0 .tcshrc\cf1\highlight1 
+\par \cf0\highlight0  ** .tcshrc  name_length=7\cf1\highlight1 
+\par \cf0\highlight0 w6\cf1\highlight1 
+\par \cf0\highlight0  ** w6  name_length=2\cf1\highlight1 
+\par \cf0\highlight0 S\cf1\highlight1 
+\par \cf0\highlight0  ** S  name_length=1\cf1\highlight1 
+\par \cf0\highlight0 .dbus\cf1\highlight1 
+\par \cf0\highlight0  ** .dbus  name_length=5\cf1\highlight1 
+\par \cf0\highlight0 .fvwm2rc\cf1\highlight1 
+\par \cf0\highlight0  ** .fvwm2rc  name_length=8\cf1\highlight1 
+\par \cf0\highlight0 .viminfo\cf1\highlight1 
+\par \cf0\highlight0  ** .viminfo  name_length=8\cf1\highlight1 
+\par \cf0\highlight0 .sqlite_history\cf1\highlight1 
+\par \cf0\highlight0  ** .sqlite_history  name_length=15\cf1\highlight1 
+\par \cf0\highlight0 cs3377\cf1\highlight1 
+\par \cf0\highlight0  ** cs3377  name_length=6\cf1\highlight1 
+\par \cf0\highlight0 public_html\cf1\highlight1 
+\par \cf0\highlight0  ** public_html  name_length=11\cf1\highlight1 
+\par \cf0\highlight0 .plan\cf1\highlight1 
+\par \cf0\highlight0  ** .plan  name_length=5\cf1\highlight1 
+\par \cf0\highlight0 .profile\cf1\highlight1 
+\par \cf0\highlight0  ** .profile  name_length=8\cf1\highlight1 
+\par \cf0\highlight0 src.3e.tar\cf1\highlight1 
+\par \cf0\highlight0  ** src.3e.tar  name_length=10\cf1\highlight1 
+\par \cf0\highlight0 .newsrc\cf1\highlight1 
+\par \cf0\highlight0  ** .newsrc  name_length=7\cf1\highlight1 
+\par \cf0\highlight0 .sunview\cf1\highlight1 
+\par \cf0\highlight0  ** .sunview  name_length=8\cf1\highlight1 
+\par \cf0\highlight0 .xsession\cf1\highlight1 
+\par \cf0\highlight0  ** .xsession  name_length=9\cf1\highlight1 
+\par \cf0\highlight0 make1\cf1\highlight1 
+\par \cf0\highlight0  ** make1  name_length=5\cf1\highlight1 
+\par \cf0\highlight0 ansda\cf1\highlight1 
+\par \cf0\highlight0  ** ansda  name_length=5\cf1\highlight1 
+\par \cf0\highlight0 a2demo\cf1\highlight1 
+\par \cf0\highlight0  ** a2demo  name_length=6\cf1\highlight1 
+\par \cf0\highlight0 w5\cf1\highlight1 
+\par \cf0\highlight0  ** w5  name_length=2\cf1\highlight1 
+\par \cf0\highlight0 .setx\cf1\highlight1 
+\par \cf0\highlight0  ** .setx  name_length=5\cf1\highlight1 
+\par \cf0\highlight0 .rootmenu\cf1\highlight1 
+\par \cf0\highlight0  ** .rootmenu  name_length=9\cf1\highlight1 
+\par \cf0\highlight0\{cslinux1:~/w6\} ./lscat1 .\cf1\highlight1 
+\par \cf0\highlight0 .\cf1\highlight1 
+\par \cf0\highlight0  ** .  name_length=1\cf1\highlight1 
+\par \cf0\highlight0 ..\cf1\highlight1 
+\par \cf0\highlight0  ** ..  name_length=2\cf1\highlight1 
+\par \cf0\highlight0 lscat1\cf1\highlight1 
+\par \cf0\highlight0  ** lscat1  name_length=6\cf1\highlight1 
+\par \cf0\highlight0 lscat1.c\cf1\highlight1 
+\par \cf0\highlight0  ** lscat1.c  name_length=8\cf1\highlight1 
+\par \cf0\highlight0 #include <sys/types.h>\cf1\highlight1 
+\par \cf0\highlight0 #include <dirent.h>\cf1\highlight1 
+\par \cf0\highlight0 #include <stdio.h>\cf1\highlight1 
+\par \cf0\highlight0 #include <stdlib.h>\cf1\highlight1 
+\par \cf0\highlight0 #include <string.h>\cf1\highlight1 
+\par \cf0\highlight0 #include <stdbool.h>\cf1\highlight1 
+\par 
+\par \cf0\highlight0 #define CHUNK 1024 /* read 1024 bytes at a time */\cf1\highlight1 
+\par 
+\par 
+\par \cf0\highlight0 int main(int argc, char **argv) \{\cf1\highlight1 
+\par \cf0\highlight0         char filename[80];\cf1\highlight1 
+\par \cf0\highlight0         int  name_length;\cf1\highlight1 
+\par \cf0\highlight0         DIR *dp;\cf1\highlight1 
+\par \cf0\highlight0         struct dirent *dirp;\cf1\highlight1 
+\par \cf0\highlight0         bool cFile;\cf1\highlight1 
+\par 
+\par \cf0\highlight0         if (argc != 2)\cf1\highlight1 
+\par \cf0\highlight0         \{\cf1\highlight1 
+\par \cf0\highlight0                 fprintf(stderr, "usage: %s dir_name\\n", argv[0]);\cf1\highlight1 
+\par \cf0\highlight0                 exit(1);\cf1\highlight1 
+\par \cf0\highlight0         \}\cf1\highlight1 
+\par 
+\par \cf0\highlight0         if ((dp = opendir(argv[1])) == NULL )\cf1\highlight1 
+\par \cf0\highlight0         \{\cf1\highlight1 
+\par \cf0\highlight0                 fprintf(stderr, "can't open '%s'\\n", argv[1]);\cf1\highlight1 
+\par \cf0\highlight0                 exit(1);\cf1\highlight1 
+\par \cf0\highlight0         \}\cf1\highlight1 
+\par 
+\par \cf0\highlight0         while ((dirp = readdir(dp)) != NULL )\cf1\highlight1 
+\par \cf0\highlight0         \{\cf1\highlight1 
+\par \cf0\highlight0                 printf("%s\\n", dirp->d_name);\cf1\highlight1 
+\par 
+\par \cf0\highlight0                 memset(filename, '\\0', sizeof(filename));\cf1\highlight1 
+\par \cf0\highlight0                 strcpy(filename, dirp->d_name);\cf1\highlight1 
+\par \cf0\highlight0                 printf(" ** %s ", filename);\cf1\highlight1 
+\par \cf0\highlight0                 name_length = strlen(filename);\cf1\highlight1 
+\par \cf0\highlight0                 printf(" name_length=%d \\n", name_length);\cf1\highlight1 
+\par 
+\par \cf0\highlight0                 if (strncmp(&filename[name_length - 1], "c", 1) == 0 && strncmp(&filename[name_length - 2], ".", 1) == 0)\{\cf1\highlight1 
+\par \cf0\highlight0                 cFile = true;\cf1\highlight1 
+\par \cf0\highlight0                  \}\cf1\highlight1 
+\par \cf0\highlight0                 else  cFile = false;\cf1\highlight1 
+\par 
+\par 
+\par \cf0\highlight0                 // if c file\cf1\highlight1 
+\par \cf0\highlight0                 if (cFile)\cf1\highlight1 
+\par \cf0\highlight0                 \{\cf1\highlight1 
+\par \cf0\highlight0                         // then print the file content\cf1\highlight1 
+\par \cf0\highlight0                         char buf[CHUNK];\cf1\highlight1 
+\par \cf0\highlight0                         FILE *file;\cf1\highlight1 
+\par \cf0\highlight0                         size_t nread;\cf1\highlight1 
+\par 
+\par \cf0\highlight0                         file = fopen(filename, "r");\cf1\highlight1 
+\par \cf0\highlight0                         if (file) \{\cf1\highlight1 
+\par \cf0\highlight0                                 while ((nread = fread(buf, 1, sizeof buf, file)) > 0)\cf1\highlight1 
+\par \cf0\highlight0                                         fwrite(buf, 1, nread, stdout);\cf1\highlight1 
+\par \cf0\highlight0                                 fclose(file);\cf1\highlight1 
+\par \cf0\highlight0                         \}\cf1\highlight1 
+\par \cf0\highlight0                 \}\cf1\highlight1 
+\par 
+\par \cf0\highlight0         \}\cf1\highlight1 
+\par 
+\par \cf0\highlight0         closedir(dp);\cf1\highlight1 
+\par \cf0\highlight0         return(0);\cf1\highlight1 
+\par \cf0\highlight0\}\cf1\highlight1 
+\par \cf0\highlight0 simple-cat\cf1\highlight1 
+\par \cf0\highlight0  ** simple-cat  name_length=10\cf1\highlight1 
+\par \cf0\highlight0 simple-cat.c\cf1\highlight1 
+\par \cf0\highlight0  ** simple-cat.c  name_length=12\cf1\highlight1 
+\par \cf0\highlight0 /*\cf1\highlight1 
+\par \cf0\highlight0  * Stripped down version of 'cat', using unbuffered I/O.\cf1\highlight1 
+\par \cf0\highlight0  * ./simple-cat < simple-cat.c\cf1\highlight1 
+\par \cf0\highlight0  */\cf1\highlight1 
+\par 
+\par \cf0\highlight0 #include <stdio.h>\cf1\highlight1 
+\par \cf0\highlight0 #include <stdlib.h>\cf1\highlight1 
+\par \cf0\highlight0 #include <unistd.h>\cf1\highlight1 
+\par 
+\par \cf0\highlight0 #define BUFFSIZE 32768\cf1\highlight1 
+\par 
+\par \cf0\highlight0 int\cf1\highlight1 
+\par \cf0\highlight0 main(int argc, char **argv) \{\cf1\highlight1 
+\par \cf0\highlight0         int n;\cf1\highlight1 
+\par \cf0\highlight0         char buf[BUFFSIZE];\cf1\highlight1 
+\par 
+\par \cf0\highlight0         while ((n = read(STDIN_FILENO, buf, BUFFSIZE)) > 0) \{\cf1\highlight1 
+\par \cf0\highlight0                 if (write(STDOUT_FILENO, buf, n) != n) \{\cf1\highlight1 
+\par \cf0\highlight0                         fprintf(stderr, "write error\\n");\cf1\highlight1 
+\par \cf0\highlight0                         exit(1);\cf1\highlight1 
+\par \cf0\highlight0                 \}\cf1\highlight1 
+\par \cf0\highlight0         \}\cf1\highlight1 
+\par 
+\par \cf0\highlight0         if (n < 0) \{\cf1\highlight1 
+\par \cf0\highlight0                 fprintf(stderr, "read error\\n");\cf1\highlight1 
+\par \cf0\highlight0                 exit(1);\cf1\highlight1 
+\par \cf0\highlight0         \}\cf1\highlight1 
+\par 
+\par \cf0\highlight0         return(0);\cf1\highlight1 
+\par \cf0\highlight0\}simple-ls.c\cf1\highlight1 
+\par \cf0\highlight0  ** simple-ls.c  name_length=11\cf1\highlight1 
+\par \cf0\highlight0 /*\cf1\highlight1 
+\par \cf0\highlight0  * simple-ls.c\cf1\highlight1 
+\par \cf0\highlight0  * Extremely low-power ls clone.\cf1\highlight1 
+\par \cf0\highlight0  * ./simple-ls .\cf1\highlight1 
+\par \cf0\highlight0  */\cf1\highlight1 
+\par 
+\par \cf0\highlight0 #include <sys/types.h>\cf1\highlight1 
+\par 
+\par \cf0\highlight0 #include <dirent.h>\cf1\highlight1 
+\par \cf0\highlight0 #include <stdio.h>\cf1\highlight1 
+\par \cf0\highlight0 #include <stdlib.h>\cf1\highlight1 
+\par 
+\par \cf0\highlight0 int\cf1\highlight1 
+\par \cf0\highlight0 main(int argc, char **argv) \{\cf1\highlight1 
+\par 
+\par \cf0\highlight0         DIR *dp;\cf1\highlight1 
+\par \cf0\highlight0         struct dirent *dirp;\cf1\highlight1 
+\par 
+\par \cf0\highlight0         if (argc != 2) \{\cf1\highlight1 
+\par \cf0\highlight0                 fprintf(stderr, "usage: %s dir_name\\n", argv[0]);\cf1\highlight1 
+\par \cf0\highlight0                 exit(1);\cf1\highlight1 
+\par \cf0\highlight0         \}\cf1\highlight1 
+\par 
+\par \cf0\highlight0         if ((dp = opendir(argv[1])) == NULL ) \{\cf1\highlight1 
+\par \cf0\highlight0                 fprintf(stderr, "can't open '%s'\\n", argv[1]);\cf1\highlight1 
+\par \cf0\highlight0                 exit(1);\cf1\highlight1 
+\par \cf0\highlight0         \}\cf1\highlight1 
+\par 
+\par \cf0\highlight0         while ((dirp = readdir(dp)) != NULL )\cf1\highlight1 
+\par \cf0\highlight0                 printf("%s\\n", dirp->d_name);\cf1\highlight1 
+\par 
+\par \cf0\highlight0         closedir(dp);\cf1\highlight1 
+\par \cf0\highlight0         return(0);\cf1\highlight1 
+\par \cf0\highlight0\}simple-ls\cf1\highlight1 
+\par \cf0\highlight0  ** simple-ls  name_length=9\cf1\highlight1 
+\par \cf0\highlight0\{cslinux1:~/w6\} exit\cf1\highlight1 
+\par \cf0\highlight0 logout\cf1\highlight1 
+\par \cf0\highlight0 There are stopped jobs.\cf1\highlight1 
+\par \cf0\highlight0\{cslinux1:~/w6\}\cf1\highlight1 
+\par \pard\cf0\highlight0\f4\fs20 
+\par }
+ 

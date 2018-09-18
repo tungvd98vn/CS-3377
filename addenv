@@ -1,0 +1,19 @@
+#!/bin/sh
+set -e
+path=$1
+string=$2
+eval myVa2='$'$path
+array=$(echo $myVa2 | tr ":" "\n")
+k=0
+for i in $array
+do
+	if [ "$string" == "$i" ]; then
+	echo "pathname already exists"
+	k=1
+	break
+	fi
+done
+if [ $k -eq 0 ]; then
+eval $path="${myVa2}:$string"
+export $path
+fi

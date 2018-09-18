@@ -1,0 +1,23 @@
+#!/bin/sh
+set -e
+path=$1
+string=$2
+eval myVa2='$'$path
+array=$(echo $myVa2 | tr ":" "\n")
+k=0
+newpath=""
+for i in $array
+do
+	if [ "$string" == "$i" ]; then
+		k=1
+	else
+		newpath+=":"
+		newpath+=$i
+	fi	
+done
+if [ $k -eq 0 ]; then
+	echo "path doesn't exist"
+else
+	eval $path="${newpath}"
+export $path
+fi
